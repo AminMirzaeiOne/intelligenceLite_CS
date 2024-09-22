@@ -86,5 +86,13 @@ namespace intelligenceLite
             this.toolTipText = toolTipText;
         }
 
+        /// <summary>
+        /// Returns text for inserting into Textbox
+        /// </summary>
+        public virtual string GetTextForReplace()
+        {
+            return Text;
+        }
+
     }
 }
