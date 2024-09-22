@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,5 +52,11 @@ namespace intelligenceLite
         /// <param name="autocompleteItem"></param>
         /// <param name="control"></param>
         void ShowToolTip(IntelligenceItem autocompleteItem, Control control = null);
+
+
+        /// <summary>
+        /// Returns rectangle of item
+        /// </summary>
+        Rectangle GetItemRectangle(int itemIndex);
     }
 }
