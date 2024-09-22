@@ -55,6 +55,11 @@ namespace intelligenceLite
             ToolTipText = Text;
         }
 
+        public override string ToString()
+        {
+            return MenuText ?? Text.Replace("\n", " ").Replace("^", "");
+        }
+
 
     }
 }
