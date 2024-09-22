@@ -16,5 +16,16 @@ namespace intelligenceLite
             public bool Handled { get; set; }
         }
 
+        public class SelectedEventArgs : EventArgs
+        {
+            public IntelligenceItem Item { get; internal set; }
+            public Control Control { get; set; }
+        }
+
+        public class HoveredEventArgs : EventArgs
+        {
+            public IntelligenceItem Item { get; internal set; }
+        }
+
     }
 }
