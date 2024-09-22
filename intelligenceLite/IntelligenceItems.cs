@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static intelligenceLite.EventArgs;
 
 namespace intelligenceLite
 {
@@ -63,6 +64,23 @@ namespace intelligenceLite
         public override string GetTextForReplace()
         {
             return Text;
+        }
+
+        public override void OnSelected(SelectedEventArgs e)
+        {
+            var tb = Parent.TargetControlWrapper;
+            //
+            if (!Text.Contains("^"))
+                return;
+            var text = tb.Text;
+            for (int i = Parent.Fragment.Start; i < text.Length; i++)
+                if (text[i] == '^')
+                {
+                    tb.SelectionStart = i;
+                    tb.SelectionLength = 1;
+                    tb.SelectedText = "";
+                    return;
+                }
         }
 
 
