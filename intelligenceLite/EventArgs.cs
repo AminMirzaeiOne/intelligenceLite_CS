@@ -27,5 +27,17 @@ namespace intelligenceLite
             public IntelligenceItem Item { get; internal set; }
         }
 
+        public class PaintItemEventArgs : PaintEventArgs
+        {
+            public RectangleF TextRect { get; internal set; }
+            public StringFormat StringFormat { get; internal set; }
+            public Font Font { get; internal set; }
+            public bool IsSelected { get; internal set; }
+            public bool IsHovered { get; internal set; }
+
+
+
+        }
+
     }
 }
