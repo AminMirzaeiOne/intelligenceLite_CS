@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -164,6 +165,36 @@ namespace intelligenceLite
                 return CompareResult.VisibleAndSelected;
 
             return CompareResult.Hidden;
+        }
+
+        public override void OnPaint(PaintItemEventArgs e)
+        {
+            if (ColumnWidth != null && ColumnWidth.Length != MenuTextByColumns.Length)
+                throw new Exception("ColumnWidth.Length != MenuTextByColumns.Length");
+
+            int[] columnWidth = ColumnWidth;
+            if (columnWidth == null)
+            {
+                columnWidth = new int[MenuTextByColumns.Length];
+                float step = e.TextRect.Width / MenuTextByColumns.Length;
+                for (int i = 0; i < MenuTextByColumns.Length; i++)
+                    columnWidth[i] = (int)step;
+            }
+
+            //draw columns
+            Pen pen = Pens.Silver;
+            float x = e.TextRect.X;
+            e.StringFormat.FormatFlags = e.StringFormat.FormatFlags | StringFormatFlags.NoWrap;
+
+            using (var brush = new SolidBrush(e.IsSelected ? Parent.SelectedForeColor : Parent.ForeColor))
+                for (int i = 0; i < MenuTextByColumns.Length; i++)
+                {
+                    var width = columnWidth[i];
+                    var rect = new RectangleF(x, e.TextRect.Top, width, e.TextRect.Height);
+                    e.Graphics.DrawLine(pen, new PointF(x, e.TextRect.Top), new PointF(x, e.TextRect.Bottom));
+                    e.Graphics.DrawString(MenuTextByColumns[i], e.Font, brush, rect, e.StringFormat);
+                    x += width;
+                }
         }
 
 
