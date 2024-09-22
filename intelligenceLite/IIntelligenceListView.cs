@@ -58,5 +58,18 @@ namespace intelligenceLite
         /// Returns rectangle of item
         /// </summary>
         Rectangle GetItemRectangle(int itemIndex);
+
+        /// <summary>
+        /// Colors
+        /// </summary>
+        Color ForeColor { get; set; }
+        Color BackColor { get; set; }
+        Color SelectedForeColor { get; set; }
+        Color SelectedBackColor { get; set; }
+        Color SelectedBackColor2 { get; set; }
+        Color HighlightingColor { get; set; }
+        System.Boolean Border { get; set; }
+        System.Drawing.Color BorderColor { get; set; }
+        System.Byte BorderSize { get; set; }
     }
 }
