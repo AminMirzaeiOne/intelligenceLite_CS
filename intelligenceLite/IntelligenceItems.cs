@@ -10,5 +10,11 @@ namespace intelligenceLite
     {
         string firstPart;
         string lowercaseText;
+
+        public MethodAutocompleteItem(string text)
+            : base(text)
+        {
+            lowercaseText = Text.ToLower();
+        }
     }
 }
