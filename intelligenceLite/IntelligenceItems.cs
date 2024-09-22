@@ -8,6 +8,7 @@ namespace intelligenceLite
 {
     public class MethodAutocompleteItem : IntelligenceItem
     {
-
+        string firstPart;
+        string lowercaseText;
     }
 }
