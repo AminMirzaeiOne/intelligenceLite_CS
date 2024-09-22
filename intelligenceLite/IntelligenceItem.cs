@@ -57,5 +57,34 @@ namespace intelligenceLite
             set { menuText = value; }
         }
 
+        public IntelligenceItem()
+        {
+            ImageIndex = -1;
+        }
+
+        public IntelligenceItem(string text) : this()
+        {
+            Text = text;
+        }
+
+        public IntelligenceItem(string text, int imageIndex)
+            : this(text)
+        {
+            this.ImageIndex = imageIndex;
+        }
+
+        public IntelligenceItem(string text, int imageIndex, string menuText)
+            : this(text, imageIndex)
+        {
+            this.menuText = menuText;
+        }
+
+        public IntelligenceItem(string text, int imageIndex, string menuText, string toolTipTitle, string toolTipText)
+            : this(text, imageIndex, menuText)
+        {
+            this.toolTipTitle = toolTipTitle;
+            this.toolTipText = toolTipText;
+        }
+
     }
 }
