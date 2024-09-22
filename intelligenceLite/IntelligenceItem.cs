@@ -23,5 +23,10 @@ namespace intelligenceLite
         /// </summary>
         public string Text { get; set; }
 
+        /// <summary>
+        /// Image index for this item
+        /// </summary>
+        public int ImageIndex { get; set; }
+
     }
 }
