@@ -28,5 +28,15 @@ namespace intelligenceLite
         /// </summary>
         public int ImageIndex { get; set; }
 
+        /// <summary>
+        /// Title for tooltip.
+        /// </summary>
+        /// <remarks>Return null for disable tooltip for this item</remarks>
+        public virtual string ToolTipTitle
+        {
+            get { return toolTipTitle; }
+            set { toolTipTitle = value; }
+        }
+
     }
 }
