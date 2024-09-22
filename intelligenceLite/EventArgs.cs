@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,9 @@ namespace intelligenceLite
             public bool IsSelected { get; internal set; }
             public bool IsHovered { get; internal set; }
 
-
+            public PaintItemEventArgs(Graphics graphics, Rectangle clipRect) : base(graphics, clipRect)
+            {
+            }
 
         }
 
