@@ -97,4 +97,13 @@ namespace intelligenceLite
 
 
     }
+
+    /// <summary>
+    /// This class finds items by substring
+    /// </summary>
+    public class SubstringAutocompleteItem : IntelligenceItem
+    {
+
+    }
+
 }
