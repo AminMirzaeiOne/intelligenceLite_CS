@@ -133,4 +133,12 @@ namespace intelligenceLite
 
     }
 
+    /// <summary>
+    /// This item draws multicolumn menu
+    /// </summary>
+    public class MulticolumnAutocompleteItem : SubstringAutocompleteItem
+    {
+
+    }
+
 }
