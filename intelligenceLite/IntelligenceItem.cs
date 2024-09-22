@@ -94,5 +94,19 @@ namespace intelligenceLite
             return Text;
         }
 
+        /// <summary>
+        /// Compares fragment text with this item
+        /// </summary>
+        public virtual CompareResult Compare(string fragmentText)
+        {
+            if (Text.StartsWith(fragmentText, StringComparison.InvariantCultureIgnoreCase) &&
+                   Text != fragmentText)
+                return CompareResult.VisibleAndSelected;
+
+            return CompareResult.Hidden;
+        }
+
+
+
     }
 }
