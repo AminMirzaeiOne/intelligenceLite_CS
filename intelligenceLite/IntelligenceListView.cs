@@ -52,6 +52,9 @@ namespace intelligenceLite
         /// </summary>
         public int ToolTipDuration { get; set; }
 
-
+        /// <summary>
+        /// Occurs when user selected item for inserting into text
+        /// </summary>
+        public event EventHandler ItemSelected;
     }
 }
