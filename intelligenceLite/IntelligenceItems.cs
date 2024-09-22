@@ -38,5 +38,16 @@ namespace intelligenceLite
         {
             return firstPart + "." + Text;
         }
+
+
+    }
+
+    /// <summary>
+    /// Autocomplete item for code snippets
+    /// </summary>
+    /// <remarks>Snippet can contain special char ^ for caret position.</remarks>
+    public class SnippetAutocompleteItem : IntelligenceItem
+    {
+
     }
 }
