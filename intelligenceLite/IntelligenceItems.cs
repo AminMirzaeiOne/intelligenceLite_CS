@@ -33,5 +33,10 @@ namespace intelligenceLite
 
             return CompareResult.Hidden;
         }
+
+        public override string GetTextForReplace()
+        {
+            return firstPart + "." + Text;
+        }
     }
 }
