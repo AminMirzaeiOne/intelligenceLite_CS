@@ -28,5 +28,10 @@ namespace intelligenceLite
         /// List of visible elements
         /// </summary>
         IList<IntelligenceItem> VisibleItems { get; set; }
+
+        /// <summary>
+        /// Duration (ms) of tooltip showing
+        /// </summary>
+        int ToolTipDuration { get; set; }
     }
 }
