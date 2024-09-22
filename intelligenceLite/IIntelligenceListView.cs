@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static intelligenceLite.EventArgs;
 
 namespace intelligenceLite
 {
@@ -38,5 +39,10 @@ namespace intelligenceLite
         /// Occurs when user selected item for inserting into text
         /// </summary>
         event EventHandler ItemSelected;
+
+        /// <summary>
+        /// Occurs when current hovered item is changing
+        /// </summary>
+        event EventHandler<HoveredEventArgs> ItemHovered;
     }
 }
