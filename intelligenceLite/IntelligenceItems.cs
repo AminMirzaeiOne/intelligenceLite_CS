@@ -60,6 +60,11 @@ namespace intelligenceLite
             return MenuText ?? Text.Replace("\n", " ").Replace("^", "");
         }
 
+        public override string GetTextForReplace()
+        {
+            return Text;
+        }
+
 
     }
 }
