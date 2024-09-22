@@ -18,5 +18,10 @@ namespace intelligenceLite
         /// </summary>
         public IntelligenceMenu Parent { get; internal set; }
 
+        /// <summary>
+        /// Text for inserting into textbox
+        /// </summary>
+        public string Text { get; set; }
+
     }
 }
