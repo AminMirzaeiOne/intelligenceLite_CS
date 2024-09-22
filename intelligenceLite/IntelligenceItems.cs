@@ -105,6 +105,16 @@ namespace intelligenceLite
     {
         protected readonly string lowercaseText;
         protected readonly bool ignoreCase;
+
+        public SubstringAutocompleteItem(string text, bool ignoreCase = true)
+            : base(text)
+        {
+            this.ignoreCase = ignoreCase;
+            if (ignoreCase)
+                lowercaseText = text.ToLower();
+        }
+
+
     }
 
 }
