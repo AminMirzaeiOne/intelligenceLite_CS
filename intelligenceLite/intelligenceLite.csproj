@@ -48,6 +48,7 @@
     <Compile Include="IIntelligenceListView.cs" />
     <Compile Include="IntelligenceItem.cs" />
     <Compile Include="IntelligenceItems.cs" />
+    <Compile Include="IntelligenceListView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
