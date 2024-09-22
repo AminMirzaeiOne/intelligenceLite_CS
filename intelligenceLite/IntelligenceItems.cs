@@ -114,6 +114,22 @@ namespace intelligenceLite
                 lowercaseText = text.ToLower();
         }
 
+        public override CompareResult Compare(string fragmentText)
+        {
+            if (ignoreCase)
+            {
+                if (lowercaseText.Contains(fragmentText.ToLower()))
+                    return CompareResult.Visible;
+            }
+            else
+            {
+                if (Text.Contains(fragmentText))
+                    return CompareResult.Visible;
+            }
+
+            return CompareResult.Hidden;
+        }
+
 
     }
 
