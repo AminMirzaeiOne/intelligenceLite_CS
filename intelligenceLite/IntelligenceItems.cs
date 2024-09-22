@@ -138,7 +138,9 @@ namespace intelligenceLite
     /// </summary>
     public class MulticolumnAutocompleteItem : SubstringAutocompleteItem
     {
-
+        public bool CompareBySubstring { get; set; }
+        public string[] MenuTextByColumns { get; set; }
+        public int[] ColumnWidth { get; set; }
     }
 
 }
