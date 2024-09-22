@@ -23,5 +23,10 @@ namespace intelligenceLite
         /// Index of current selected item
         /// </summary>
         int HighlightedItemIndex { get; set; }
+
+        /// <summary>
+        /// List of visible elements
+        /// </summary>
+        IList<IntelligenceItem> VisibleItems { get; set; }
     }
 }
