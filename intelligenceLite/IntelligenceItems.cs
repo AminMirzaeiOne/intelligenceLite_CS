@@ -48,6 +48,13 @@ namespace intelligenceLite
     /// <remarks>Snippet can contain special char ^ for caret position.</remarks>
     public class SnippetAutocompleteItem : IntelligenceItem
     {
+        public SnippetAutocompleteItem(string snippet)
+        {
+            Text = snippet.Replace("\r", "");
+            ToolTipTitle = "Code snippet:";
+            ToolTipText = Text;
+        }
+
 
     }
 }
