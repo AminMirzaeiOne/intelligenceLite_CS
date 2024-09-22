@@ -71,5 +71,7 @@ namespace intelligenceLite
         System.Boolean Border { get; set; }
         System.Drawing.Color BorderColor { get; set; }
         System.Byte BorderSize { get; set; }
+
+
     }
 }
