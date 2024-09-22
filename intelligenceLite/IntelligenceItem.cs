@@ -107,6 +107,15 @@ namespace intelligenceLite
         }
 
 
+        /// <summary>
+        /// Returns text for display into popup menu
+        /// </summary>
+        public override string ToString()
+        {
+            return menuText ?? Text;
+        }
+
+
 
     }
 }
