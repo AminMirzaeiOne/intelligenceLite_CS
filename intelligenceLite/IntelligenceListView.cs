@@ -47,6 +47,11 @@ namespace intelligenceLite
         [Category("Color Options")]
         public Color HighlightingColor { get; set; } = Color.White;
 
+        /// <summary>
+        /// Duration (ms) of tooltip showing
+        /// </summary>
+        public int ToolTipDuration { get; set; }
+
 
     }
 }
