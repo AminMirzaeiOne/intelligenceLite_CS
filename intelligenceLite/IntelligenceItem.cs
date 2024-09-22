@@ -48,5 +48,14 @@ namespace intelligenceLite
             set { toolTipText = value; }
         }
 
+        /// <summary>
+        /// Menu text. This text is displayed in the drop-down menu.
+        /// </summary>
+        public virtual string MenuText
+        {
+            get { return menuText; }
+            set { menuText = value; }
+        }
+
     }
 }
