@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace intelligenceLite
 {
-    internal class IntelligenceItems
+    public class MethodAutocompleteItem : IntelligenceItem
     {
+
     }
 }
