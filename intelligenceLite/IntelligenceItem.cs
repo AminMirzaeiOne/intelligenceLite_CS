@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -121,6 +122,12 @@ namespace intelligenceLite
         /// </summary>
         public virtual void OnSelected(SelectedEventArgs e)
         {
+        }
+
+        public virtual void OnPaint(PaintItemEventArgs e)
+        {
+            using (var brush = new SolidBrush(e.IsSelected ? Parent.SelectedForeColor : Parent.ForeColor))
+                e.Graphics.DrawString(ToString(), e.Font, brush, e.TextRect, e.StringFormat);
         }
 
 
