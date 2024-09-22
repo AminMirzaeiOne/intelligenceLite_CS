@@ -13,5 +13,10 @@ namespace intelligenceLite
         string toolTipText;
         string menuText;
 
+        /// <summary>
+        /// Parent AutocompleteMenu
+        /// </summary>
+        public IntelligenceMenu Parent { get; internal set; }
+
     }
 }
