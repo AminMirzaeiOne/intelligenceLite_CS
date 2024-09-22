@@ -83,6 +83,18 @@ namespace intelligenceLite
                 }
         }
 
+        /// <summary>
+        /// Compares fragment text with this item
+        /// </summary>
+        public override CompareResult Compare(string fragmentText)
+        {
+            if (Text.StartsWith(fragmentText, StringComparison.InvariantCultureIgnoreCase) &&
+                   Text != fragmentText)
+                return CompareResult.Visible;
+
+            return CompareResult.Hidden;
+        }
+
 
     }
 }
