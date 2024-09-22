@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace intelligenceLite
 {
@@ -40,6 +41,17 @@ namespace intelligenceLite
             {
             }
 
+        }
+
+        public class WrapperNeededEventArgs : EventArgs
+        {
+            public Control TargetControl { get; private set; }
+            public ITextBoxWrapper Wrapper { get; set; }
+
+            public WrapperNeededEventArgs(Control targetControl)
+            {
+                this.TargetControl = targetControl;
+            }
         }
 
     }
