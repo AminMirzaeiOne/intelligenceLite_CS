@@ -38,5 +38,15 @@ namespace intelligenceLite
             set { toolTipTitle = value; }
         }
 
+        /// <summary>
+        /// Tooltip text.
+        /// </summary>
+        /// <remarks>For display tooltip text, ToolTipTitle must be not null</remarks>
+        public virtual string ToolTipText
+        {
+            get { return toolTipText; }
+            set { toolTipText = value; }
+        }
+
     }
 }
