@@ -18,5 +18,10 @@ namespace intelligenceLite
         /// Index of current selected item
         /// </summary>
         int SelectedItemIndex { get; set; }
+
+        /// <summary>
+        /// Index of current selected item
+        /// </summary>
+        int HighlightedItemIndex { get; set; }
     }
 }
