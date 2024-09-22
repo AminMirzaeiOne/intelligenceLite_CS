@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static intelligenceLite.EventArgs;
 
 namespace intelligenceLite
 {
@@ -113,6 +114,13 @@ namespace intelligenceLite
         public override string ToString()
         {
             return menuText ?? Text;
+        }
+
+        /// <summary>
+        /// This method is called after item was inserted into text
+        /// </summary>
+        public virtual void OnSelected(SelectedEventArgs e)
+        {
         }
 
 
