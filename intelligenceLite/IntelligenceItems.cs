@@ -149,6 +149,23 @@ namespace intelligenceLite
             this.MenuTextByColumns = menuTextByColumns;
         }
 
+        public override CompareResult Compare(string fragmentText)
+        {
+            if (CompareBySubstring)
+                return base.Compare(fragmentText);
+
+            if (ignoreCase)
+            {
+                if (Text.StartsWith(fragmentText, StringComparison.InvariantCultureIgnoreCase))
+                    return CompareResult.VisibleAndSelected;
+            }
+            else
+                if (Text.StartsWith(fragmentText))
+                return CompareResult.VisibleAndSelected;
+
+            return CompareResult.Hidden;
+        }
+
 
     }
 
