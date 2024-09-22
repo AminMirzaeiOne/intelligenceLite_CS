@@ -141,6 +141,15 @@ namespace intelligenceLite
         public bool CompareBySubstring { get; set; }
         public string[] MenuTextByColumns { get; set; }
         public int[] ColumnWidth { get; set; }
+
+        public MulticolumnAutocompleteItem(string[] menuTextByColumns, string insertingText, bool compareBySubstring = true, bool ignoreCase = true)
+            : base(insertingText, ignoreCase)
+        {
+            this.CompareBySubstring = compareBySubstring;
+            this.MenuTextByColumns = menuTextByColumns;
+        }
+
+
     }
 
 }
