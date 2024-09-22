@@ -44,5 +44,12 @@ namespace intelligenceLite
         /// Occurs when current hovered item is changing
         /// </summary>
         event EventHandler<HoveredEventArgs> ItemHovered;
+
+        /// <summary>
+        /// Shows tooltip
+        /// </summary>
+        /// <param name="autocompleteItem"></param>
+        /// <param name="control"></param>
+        void ShowToolTip(IntelligenceItem autocompleteItem, Control control = null);
     }
 }
