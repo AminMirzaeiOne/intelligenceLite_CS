@@ -13,5 +13,10 @@ namespace intelligenceLite
         /// Image list
         /// </summary>
         ImageList ImageList { get; set; }
+
+        /// <summary>
+        /// Index of current selected item
+        /// </summary>
+        int SelectedItemIndex { get; set; }
     }
 }
