@@ -103,7 +103,8 @@ namespace intelligenceLite
     /// </summary>
     public class SubstringAutocompleteItem : IntelligenceItem
     {
-
+        protected readonly string lowercaseText;
+        protected readonly bool ignoreCase;
     }
 
 }
