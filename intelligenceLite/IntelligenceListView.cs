@@ -307,6 +307,12 @@ namespace intelligenceLite
             OnItemSelected();
         }
 
+        private void OnItemSelected()
+        {
+            if (ItemSelected != null)
+                ItemSelected(this, EventArgs.Empty);
+        }
+
 
     }
 }
