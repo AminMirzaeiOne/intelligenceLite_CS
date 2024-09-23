@@ -494,6 +494,26 @@ namespace intelligenceLite
                 ShowIntelligence(false);
         }
 
+        void SubscribeForm(ITextBoxWrapper wrapper)
+        {
+            if (wrapper == null) return;
+            var form = wrapper.TargetControl.FindForm();
+            if (form == null) return;
+            if (myForm != null)
+            {
+                if (myForm == form)
+                    return;
+                UnsubscribeForm(wrapper);
+            }
+
+            myForm = form;
+
+            form.LocationChanged += new EventHandler(form_LocationChanged);
+            form.ResizeBegin += new EventHandler(form_LocationChanged);
+            form.FormClosing += new FormClosingEventHandler(form_FormClosing);
+            form.LostFocus += new EventHandler(form_LocationChanged);
+        }
+
 
         public IntelligenceMenu()
         {
