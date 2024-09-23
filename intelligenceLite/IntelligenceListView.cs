@@ -159,6 +159,12 @@ namespace intelligenceLite
             }
         }
 
+        private void OnItemHovered(HoveredEventArgs e)
+        {
+            if (ItemHovered != null)
+                ItemHovered(this, e);
+        }
+
 
 
     }
