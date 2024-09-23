@@ -112,6 +112,17 @@ namespace intelligenceLite
             }
         }
 
+        [Category("Appearance")]
+        public Color HighlightingColor
+        {
+            get { return this.highlightingColor; }
+            set
+            {
+                this.highlightingColor = value;
+                this.ListView.HighlightingColor = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
