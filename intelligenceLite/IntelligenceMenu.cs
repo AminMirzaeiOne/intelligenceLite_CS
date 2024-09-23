@@ -946,6 +946,14 @@ namespace intelligenceLite
             return false;
         }
 
+        /// <summary>
+        /// Menu is visible
+        /// </summary>
+        public bool Visible
+        {
+            get { return Host != null && Host.Visible; }
+        }
+
 
 
         public IntelligenceMenu()
