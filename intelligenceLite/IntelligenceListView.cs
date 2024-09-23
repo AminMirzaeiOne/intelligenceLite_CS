@@ -21,6 +21,8 @@ namespace intelligenceLite
         private int oldItemCount;
         private int selectedItemIndex = -1;
         private IList<IntelligenceItem> visibleItems;
+        private int itemHeight;
+
 
         [Category("Border Options")]
         public System.Boolean Border { get; set; } = true;
@@ -96,5 +98,7 @@ namespace intelligenceLite
             }
             base.Dispose(disposing);
         }
+
+
     }
 }
