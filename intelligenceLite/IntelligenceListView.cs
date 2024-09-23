@@ -178,5 +178,18 @@ namespace intelligenceLite
             oldItemCount = VisibleItems.Count;
         }
 
+        private void ScrollToSelected()
+        {
+            int y = SelectedItemIndex * ItemHeight - VerticalScroll.Value;
+            if (y < 0)
+                VerticalScroll.Value = SelectedItemIndex * ItemHeight;
+            if (y > ClientSize.Height - ItemHeight)
+                VerticalScroll.Value = Math.Min(VerticalScroll.Maximum,
+                                                SelectedItemIndex * ItemHeight - ClientSize.Height + ItemHeight);
+            //some magic for update scrolls
+            AutoScrollMinSize -= new Size(1, 0);
+            AutoScrollMinSize += new Size(1, 0);
+        }
+
     }
 }
