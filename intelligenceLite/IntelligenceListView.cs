@@ -197,5 +197,10 @@ namespace intelligenceLite
             return new Rectangle(0, y, ClientSize.Width - 1, ItemHeight - 1);
         }
 
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            e.Graphics.Clear(this.BackColor);
+        }
+
     }
 }
