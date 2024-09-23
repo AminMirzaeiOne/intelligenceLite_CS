@@ -362,6 +362,30 @@ namespace intelligenceLite
             set { SetIntelligenceItems(value); }
         }
 
+        // <summary>
+        /// The control for menu displaying.
+        /// Set to null for restore default ListView (AutocompleteListView).
+        /// </summary>
+        [Browsable(false)]
+        public IIntelligenceListView ListView
+        {
+            get { return Host.ListView; }
+            set
+            {
+                if (ListView != null)
+                {
+                    var ctrl = value as Control;
+                    value.ImageList = ImageList;
+                    ctrl.RightToLeft = RightToLeft;
+                    ctrl.Font = Font;
+                    ctrl.MaximumSize = MaximumSize;
+                }
+                Host.ListView = value;
+                Host.ListView.ItemSelected += new EventHandler(ListView_ItemSelected);
+                Host.ListView.ItemHovered += new EventHandler<HoveredEventArgs>(ListView_ItemHovered);
+            }
+        }
+
 
         public IntelligenceMenu()
         {
