@@ -54,9 +54,6 @@
     <Compile Include="IntelligenceMenu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="IntelligenceMenu.Designer.cs">
-      <DependentUpon>IntelligenceMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

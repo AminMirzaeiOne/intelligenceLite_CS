@@ -14,7 +14,7 @@ using static intelligenceLite.EventArgs;
 namespace intelligenceLite
 {
     [ProvideProperty("IntelligenceMenu", typeof(Control))]
-    public partial class IntelligenceMenu : Component, IExtenderProvider
+    public class IntelligenceMenu : Component, IExtenderProvider
     {
         private static readonly Dictionary<Control, IntelligenceMenu> IntelligenceMenuByControls =
             new Dictionary<Control, IntelligenceMenu>();
@@ -956,16 +956,6 @@ namespace intelligenceLite
 
 
 
-        public IntelligenceMenu()
-        {
-            InitializeComponent();
-        }
 
-        public IntelligenceMenu(IContainer container)
-        {
-            container.Add(this);
-
-            InitializeComponent();
-        }
     }
 }
