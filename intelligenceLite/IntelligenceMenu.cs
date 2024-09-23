@@ -319,6 +319,13 @@ namespace intelligenceLite
         [Browsable(false)]
         public Range Fragment { get; internal set; }
 
+        /// <summary>
+        /// Regex pattern for serach fragment around caret
+        /// </summary>
+        [Description("Regex pattern for serach fragment around caret")]
+        [DefaultValue(@"[\w\.]")]
+        public string SearchPattern { get; set; }
+
 
         public IntelligenceMenu()
         {
