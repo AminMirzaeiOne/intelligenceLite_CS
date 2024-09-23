@@ -121,5 +121,8 @@ namespace intelligenceLite
             }
         }
 
+        public int LeftPadding { get; set; }
+
+
     }
 }
