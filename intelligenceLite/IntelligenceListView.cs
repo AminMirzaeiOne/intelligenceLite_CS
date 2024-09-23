@@ -336,6 +336,14 @@ namespace intelligenceLite
             Invalidate();
         }
 
+        public void SetItems(List<IntelligenceItem> items)
+        {
+            VisibleItems = items;
+            SelectedItemIndex = -1;
+            AdjustScroll();
+            Invalidate();
+        }
+
 
     }
 }
