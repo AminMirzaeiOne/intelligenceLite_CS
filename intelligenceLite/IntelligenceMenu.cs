@@ -469,6 +469,12 @@ namespace intelligenceLite
         [Description("Occurs when user selects item.")]
         public event EventHandler<SelectingEventArgs> Selecting;
 
+        /// <summary>
+        /// It fires after item was inserting
+        /// </summary>
+        [Description("Occurs after user selected item.")]
+        public event EventHandler<SelectedEventArgs> Selected;
+
 
         public IntelligenceMenu()
         {
