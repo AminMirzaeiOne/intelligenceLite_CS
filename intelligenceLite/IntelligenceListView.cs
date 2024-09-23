@@ -313,6 +313,11 @@ namespace intelligenceLite
                 ItemSelected(this, EventArgs.Empty);
         }
 
+        private int PointToItemIndex(Point p)
+        {
+            return (p.Y + VerticalScroll.Value) / ItemHeight;
+        }
+
 
     }
 }
