@@ -160,9 +160,14 @@ namespace intelligenceLite
             base.Dispose(disposing);
         }
 
-        void ListView_ItemSelected(object sender, EventArgs e)
+        void ListView_ItemSelected(object sender, System.EventArgs e)
         {
             OnSelecting();
+        }
+
+        void ListView_ItemHovered(object sender, HoveredEventArgs e)
+        {
+            OnHovered(e);
         }
 
 
