@@ -260,6 +260,12 @@ namespace intelligenceLite
                 e.Graphics.DrawRectangle(new Pen(this.BorderColor, this.BorderSize), e.ClipRectangle);
         }
 
+        protected override void OnScroll(ScrollEventArgs se)
+        {
+            base.OnScroll(se);
+            Invalidate(true);
+        }
+
 
 
     }
