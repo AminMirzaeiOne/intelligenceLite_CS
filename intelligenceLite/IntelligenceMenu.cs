@@ -901,6 +901,13 @@ namespace intelligenceLite
                 Selected(this, args);
         }
 
+        public void SelectNext(int shift)
+        {
+            SelectedItemIndex = Math.Max(0, Math.Min(SelectedItemIndex + shift, VisibleItems.Count - 1));
+            //
+            (Host.ListView as Control).Invalidate();
+        }
+
 
 
         public IntelligenceMenu()
