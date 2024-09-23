@@ -258,6 +258,27 @@ namespace intelligenceLite
             set { (Host.ListView as Control).Font = value; }
         }
 
+        /// <summary>
+        /// Left padding of text
+        /// </summary>
+        [DefaultValue(18)]
+        [Description("Left padding of text")]
+        public int LeftPadding
+        {
+            get
+            {
+                if (Host.ListView is IntelligenceListView)
+                    return (Host.ListView as IntelligenceListView).LeftPadding;
+                else
+                    return 0;
+            }
+            set
+            {
+                if (Host.ListView is IntelligenceListView)
+                    (Host.ListView as IntelligenceListView).LeftPadding = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
