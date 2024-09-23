@@ -17,6 +17,9 @@ namespace intelligenceLite
         private static readonly Dictionary<Control, ITextBoxWrapper> WrapperByControls =
             new Dictionary<Control, ITextBoxWrapper>();
 
+        private ITextBoxWrapper targetControlWrapper;
+        private readonly Timer timer = new Timer();
+
 
         public IntelligenceMenu()
         {
