@@ -232,6 +232,23 @@ namespace intelligenceLite
             }
         }
 
+        /// <summary>
+        /// Maximum size of popup menu
+        /// </summary>
+        [DefaultValue(typeof(Size), "180, 200")]
+        [Description("Maximum size of popup menu")]
+        public Size MaximumSize
+        {
+            get { return maximumSize; }
+            set
+            {
+                maximumSize = value;
+                (Host.ListView as Control).MaximumSize = maximumSize;
+                (Host.ListView as Control).Size = maximumSize;
+                Host.CalcSize();
+            }
+        }
+
         public IntelligenceMenu()
         {
             InitializeComponent();
