@@ -889,6 +889,12 @@ namespace intelligenceLite
             fragment.TargetWrapper.TargetControl.Focus();
         }
 
+        internal void OnSelecting(SelectingEventArgs args)
+        {
+            if (Selecting != null)
+                Selecting(this, args);
+        }
+
 
 
         public IntelligenceMenu()
