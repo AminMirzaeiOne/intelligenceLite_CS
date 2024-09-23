@@ -680,6 +680,32 @@ namespace intelligenceLite
                 Close();
         }
 
+        private void ShowMenu()
+        {
+            if (!Host.Visible)
+            {
+                var args = new CancelEventArgs();
+                OnOpening(args);
+                if (!args.Cancel)
+                {
+                    //calc screen point for popup menu
+                    Point point = TargetControlWrapper.TargetControl.Location;
+                    point.Offset(2, TargetControlWrapper.TargetControl.Height + 2);
+                    point = TargetControlWrapper.GetPositionFromCharIndex(Fragment.Start);
+                    point.Offset(2, TargetControlWrapper.TargetControl.Font.Height + 2);
+                    //
+                    Host.Show(TargetControlWrapper.TargetControl, point);
+                    if (CaptureFocus)
+                    {
+                        (Host.ListView as Control).Focus();
+                        //ProcessKey((char) Keys.Down, Keys.None);
+                    }
+                }
+            }
+            else
+                (Host.ListView as Control).Invalidate();
+        }
+
 
 
         public IntelligenceMenu()
