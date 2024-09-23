@@ -344,6 +344,32 @@ namespace intelligenceLite
             Invalidate();
         }
 
+        public void ShowToolTip(IntelligenceItem autocompleteItem, Control control = null)
+        {
+            string title = autocompleteItem.ToolTipTitle;
+            string text = autocompleteItem.ToolTipText;
+            if (control == null)
+                control = this;
+
+            if (string.IsNullOrEmpty(title))
+            {
+                toolTip.ToolTipTitle = null;
+                toolTip.SetToolTip(control, null);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(text))
+            {
+                toolTip.ToolTipTitle = null;
+                toolTip.Show(title, control, Width + 3, 0, ToolTipDuration);
+            }
+            else
+            {
+                toolTip.ToolTipTitle = title;
+                toolTip.Show(text, control, Width + 3, 0, ToolTipDuration);
+            }
+        }
+
 
     }
 }
