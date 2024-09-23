@@ -193,6 +193,14 @@ namespace intelligenceLite
         public event EventHandler<WrapperNeededEventArgs> WrapperNeeded;
 
 
+        protected void OnWrapperNeeded(WrapperNeededEventArgs args)
+        {
+            if (WrapperNeeded != null)
+                WrapperNeeded(this, args);
+            if (args.Wrapper == null)
+                args.Wrapper = TextBoxWrapper.Create(args.TargetControl);
+        }
+
         public IntelligenceMenu()
         {
             InitializeComponent();
