@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using System.ComponentModel;
 using System.Drawing;
 using static intelligenceLite.EventArgs;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace intelligenceLite
 {
@@ -62,5 +64,22 @@ namespace intelligenceLite
         /// Occurs when current hovered item is changing
         /// </summary>
         public event EventHandler<HoveredEventArgs> ItemHovered;
+
+        /// <summary>
+        /// Colors
+        /// </summary>
+        /// 
+
+        internal IntelligenceListView()
+        {
+            SetStyle(
+                ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint, true);
+            base.Font = new Font(FontFamily.GenericSansSerif, 9);
+            ItemHeight = Font.Height + 2;
+            VerticalScroll.SmallChange = ItemHeight;
+            BackColor = Color.White;
+            LeftPadding = 18;
+            ToolTipDuration = 3000;
+        }
     }
 }
