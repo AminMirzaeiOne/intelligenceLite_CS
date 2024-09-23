@@ -843,6 +843,44 @@ namespace intelligenceLite
             ShowIntelligence(forced);
         }
 
+        internal virtual void OnSelecting()
+        {
+            if (SelectedItemIndex < 0 || SelectedItemIndex >= VisibleItems.Count)
+                return;
+
+            IntelligenceItem item = VisibleItems[SelectedItemIndex];
+            var args = new SelectingEventArgs
+            {
+                Item = item,
+                SelectedIndex = SelectedItemIndex
+            };
+
+            OnSelecting(args);
+
+            if (args.Cancel)
+            {
+                SelectedItemIndex = args.SelectedIndex;
+                (Host.ListView as Control).Invalidate(true);
+                return;
+            }
+
+            if (!args.Handled)
+            {
+                Range fragment = Fragment;
+                ApplyIntelligence(item, fragment);
+            }
+
+            Close();
+            //
+            var args2 = new SelectedEventArgs
+            {
+                Item = item,
+                Control = TargetControlWrapper.TargetControl
+            };
+            item.OnSelected(args2);
+            OnSelected(args2);
+        }
+
 
 
         public IntelligenceMenu()
