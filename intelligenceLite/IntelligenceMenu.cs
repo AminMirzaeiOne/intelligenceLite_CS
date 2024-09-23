@@ -340,6 +340,13 @@ namespace intelligenceLite
         [DefaultValue(false)]
         public bool AllowsTabKey { get; set; }
 
+        /// <summary>
+        /// Interval of menu appear (ms)
+        /// </summary>
+        [Description("Interval of menu appear (ms)")]
+        [DefaultValue(500)]
+        public int AppearInterval { get; set; }
+
 
         public IntelligenceMenu()
         {
