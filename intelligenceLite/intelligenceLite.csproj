@@ -51,9 +51,6 @@
     <Compile Include="IntelligenceListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="IntelligenceListView.Designer.cs">
-      <DependentUpon>IntelligenceListView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
