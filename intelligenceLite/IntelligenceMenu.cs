@@ -749,6 +749,12 @@ namespace intelligenceLite
             Host.CalcSize();
         }
 
+        internal void OnOpening(CancelEventArgs args)
+        {
+            if (Opening != null)
+                Opening(this, args);
+        }
+
 
 
         public IntelligenceMenu()
