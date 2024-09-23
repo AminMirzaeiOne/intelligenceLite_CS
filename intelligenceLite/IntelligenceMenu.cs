@@ -638,6 +638,47 @@ namespace intelligenceLite
                 return null;
         }
 
+        internal void ShowIntelligence(bool forced)
+        {
+            if (forced)
+                forcedOpened = true;
+
+            if (TargetControlWrapper != null && TargetControlWrapper.Readonly)
+            {
+                Close();
+                return;
+            }
+
+            if (!Enabled)
+            {
+                Close();
+                return;
+            }
+
+            if (!forcedOpened && !AutoPopup)
+            {
+                Close();
+                return;
+            }
+
+            //build list
+            BuildIntelligenceList(forcedOpened);
+
+            //show popup menu
+            if (VisibleItems.Count > 0)
+            {
+                if (forced && VisibleItems.Count == 1 && Host.ListView.SelectedItemIndex == 0)
+                {
+                    //do autocomplete if menu contains only one line and user press CTRL-SPACE
+                    OnSelecting();
+                    Close();
+                }
+                else
+                    ShowMenu();
+            }
+            else
+                Close();
+        }
 
 
 
