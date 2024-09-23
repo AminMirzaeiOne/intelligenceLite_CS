@@ -475,6 +475,12 @@ namespace intelligenceLite
         [Description("Occurs after user selected item.")]
         public event EventHandler<SelectedEventArgs> Selected;
 
+        /// <summary>
+        /// It fires when item was hovered
+        /// </summary>
+        [Description("Occurs when user hovered item.")]
+        public event EventHandler<HoveredEventArgs> Hovered;
+
 
         public IntelligenceMenu()
         {
