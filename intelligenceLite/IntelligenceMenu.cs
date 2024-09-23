@@ -790,6 +790,12 @@ namespace intelligenceLite
             return result;
         }
 
+        public void Close()
+        {
+            Host.Close();
+            forcedOpened = false;
+        }
+
 
 
         public IntelligenceMenu()
