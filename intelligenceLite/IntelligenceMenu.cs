@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static intelligenceLite.EventArgs;
@@ -753,6 +754,40 @@ namespace intelligenceLite
         {
             if (Opening != null)
                 Opening(this, args);
+        }
+
+        private Range GetFragment(string searchPattern)
+        {
+            var tb = TargetControlWrapper;
+
+            if (tb.SelectionLength > 0) return new Range(tb);
+
+            string text = tb.Text;
+            var regex = new Regex(searchPattern);
+            var result = new Range(tb);
+
+            int startPos = tb.SelectionStart;
+            //go forward
+            int i = startPos;
+            while (i >= 0 && i < text.Length)
+            {
+                if (!regex.IsMatch(text[i].ToString()))
+                    break;
+                i++;
+            }
+            result.End = i;
+
+            //go backward
+            i = startPos;
+            while (i > 0 && (i - 1) < text.Length)
+            {
+                if (!regex.IsMatch(text[i - 1].ToString()))
+                    break;
+                i--;
+            }
+            result.Start = i;
+
+            return result;
         }
 
 
