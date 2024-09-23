@@ -313,6 +313,12 @@ namespace intelligenceLite
             set { Host.ListView.ImageList = value; }
         }
 
+        /// <summary>
+        /// Fragment
+        /// </summary>
+        [Browsable(false)]
+        public Range Fragment { get; internal set; }
+
 
         public IntelligenceMenu()
         {
