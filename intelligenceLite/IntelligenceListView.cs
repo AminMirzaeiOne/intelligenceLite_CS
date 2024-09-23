@@ -287,6 +287,17 @@ namespace intelligenceLite
             mouseEnterPoint = Control.MousePosition;
         }
 
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+
+            if (mouseEnterPoint != Control.MousePosition)
+            {
+                HighlightedItemIndex = PointToItemIndex(e.Location);
+                Invalidate();
+            }
+        }
+
 
     }
 }
