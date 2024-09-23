@@ -57,6 +57,17 @@ namespace intelligenceLite
             set { this.ListView.BorderSize = value; }
         }
 
+        [Category("Appearance")]
+        public Color ForeColor
+        {
+            get { return this.foreColor; }
+            set
+            {
+                this.foreColor = value;
+                this.ListView.ForeColor = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
