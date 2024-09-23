@@ -136,6 +136,29 @@ namespace intelligenceLite
             }
         }
 
+        public int SelectedItemIndex
+        {
+            get { return selectedItemIndex; }
+            set
+            {
+                IntelligenceItem item = null;
+                if (value >= 0 && value < VisibleItems.Count)
+                    item = VisibleItems[value];
+
+                selectedItemIndex = value;
+
+                OnItemHovered(new HoveredEventArgs() { Item = item });
+
+                if (item != null)
+                {
+                    ShowToolTip(item);
+                    ScrollToSelected();
+                }
+
+                Invalidate();
+            }
+        }
+
 
 
     }
