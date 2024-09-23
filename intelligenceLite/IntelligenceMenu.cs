@@ -707,6 +707,49 @@ namespace intelligenceLite
         }
 
 
+        private void BuildIntelligenceList(bool forced)
+        {
+            var visibleItems = new List<IntelligenceItem>();
+
+            bool foundSelected = false;
+            int selectedIndex = -1;
+            //get fragment around caret
+            Range fragment = GetFragment(SearchPattern);
+            string text = fragment.Text;
+            //
+            if (sourceItems != null)
+                if (forced || (text.Length >= MinFragmentLength /* && tb.Selection.Start == tb.Selection.End*/))
+                {
+                    Fragment = fragment;
+                    //build popup menu
+                    foreach (IntelligenceItem item in sourceItems)
+                    {
+                        item.Parent = this;
+                        CompareResult res = item.Compare(text);
+                        if (res != CompareResult.Hidden)
+                            visibleItems.Add(item);
+                        if (res == CompareResult.VisibleAndSelected && !foundSelected)
+                        {
+                            foundSelected = true;
+                            selectedIndex = visibleItems.Count - 1;
+                        }
+                    }
+
+                }
+
+            VisibleItems = visibleItems;
+
+            if (foundSelected)
+                SelectedItemIndex = selectedIndex;
+            else
+                SelectedItemIndex = 0;
+
+            Host.ListView.HighlightedItemIndex = -1;
+
+            Host.CalcSize();
+        }
+
+
 
         public IntelligenceMenu()
         {
