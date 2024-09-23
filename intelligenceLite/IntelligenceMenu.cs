@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static intelligenceLite.EventArgs;
 
 namespace intelligenceLite
 {
@@ -132,6 +133,21 @@ namespace intelligenceLite
         {
             get { return Host.ListView.ToolTipDuration; }
             set { Host.ListView.ToolTipDuration = value; }
+        }
+
+        public IntelligenceMenu()
+        {
+            Host = new IntelligenceMenuHost(this);
+            Host.ListView.ItemSelected += new EventHandler(ListView_ItemSelected);
+            Host.ListView.ItemHovered += new EventHandler<HoveredEventArgs>(ListView_ItemHovered);
+            VisibleItems = new List<IntelligenceItem>();
+            Enabled = true;
+            AppearInterval = 500;
+            timer.Tick += timer_Tick;
+            MaximumSize = new Size(180, 200);
+            AutoPopup = true;
+            SearchPattern = @"[\w\.]";
+            MinFragmentLength = 2;
         }
 
 
