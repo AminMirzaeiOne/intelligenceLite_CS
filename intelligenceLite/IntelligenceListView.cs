@@ -111,6 +111,15 @@ namespace intelligenceLite
             }
         }
 
+        public override Font Font
+        {
+            get { return base.Font; }
+            set
+            {
+                base.Font = value;
+                ItemHeight = Font.Height + 2;
+            }
+        }
 
     }
 }
