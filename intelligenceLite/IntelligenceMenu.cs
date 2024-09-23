@@ -895,6 +895,12 @@ namespace intelligenceLite
                 Selecting(this, args);
         }
 
+        public void OnSelected(SelectedEventArgs args)
+        {
+            if (Selected != null)
+                Selected(this, args);
+        }
+
 
 
         public IntelligenceMenu()
