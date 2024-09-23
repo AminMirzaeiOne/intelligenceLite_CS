@@ -123,6 +123,17 @@ namespace intelligenceLite
             }
         }
 
+        /// <summary>
+        /// Duration (ms) of tooltip showing
+        /// </summary>
+        [Description("Duration (ms) of tooltip showing")]
+        [DefaultValue(3000)]
+        public int ToolTipDuration
+        {
+            get { return Host.ListView.ToolTipDuration; }
+            set { Host.ListView.ToolTipDuration = value; }
+        }
+
 
         public IntelligenceMenu()
         {
