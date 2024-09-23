@@ -23,6 +23,8 @@ namespace intelligenceLite
         private int selectedItemIndex = -1;
         private IList<IntelligenceItem> visibleItems;
         private int itemHeight;
+        private Point mouseEnterPoint;
+
 
 
         [Category("Border Options")]
@@ -277,6 +279,8 @@ namespace intelligenceLite
                 Invalidate();
             }
         }
+
+
 
 
 
