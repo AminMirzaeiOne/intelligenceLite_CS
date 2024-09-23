@@ -809,6 +809,11 @@ namespace intelligenceLite
             SetIntelligenceItems(list);
         }
 
+        public void SetIntelligenceItems(IEnumerable<IntelligenceItem> items)
+        {
+            sourceItems = items;
+        }
+
 
 
         public IntelligenceMenu()
