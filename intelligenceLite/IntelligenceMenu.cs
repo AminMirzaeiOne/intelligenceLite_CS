@@ -541,6 +541,19 @@ namespace intelligenceLite
             Close();
         }
 
+        ITextBoxWrapper FindWrapper(Control sender)
+        {
+            while (sender != null)
+            {
+                if (WrapperByControls.ContainsKey(sender))
+                    return WrapperByControls[sender];
+
+                sender = sender.Parent;
+            }
+
+            return null;
+        }
+
 
         public IntelligenceMenu()
         {
