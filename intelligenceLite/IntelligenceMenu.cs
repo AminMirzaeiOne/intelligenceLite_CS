@@ -796,6 +796,19 @@ namespace intelligenceLite
             forcedOpened = false;
         }
 
+        public void SetIntelligenceItems(IEnumerable<string> items)
+        {
+            var list = new List<IntelligenceItem>();
+            if (items == null)
+            {
+                sourceItems = null;
+                return;
+            }
+            foreach (string item in items)
+                list.Add(new IntelligenceItem(item));
+            SetIntelligenceItems(list);
+        }
+
 
 
         public IntelligenceMenu()
