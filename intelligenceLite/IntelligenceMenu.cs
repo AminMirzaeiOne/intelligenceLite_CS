@@ -160,6 +160,11 @@ namespace intelligenceLite
             base.Dispose(disposing);
         }
 
+        void ListView_ItemSelected(object sender, EventArgs e)
+        {
+            OnSelecting();
+        }
+
 
         public IntelligenceMenu()
         {
