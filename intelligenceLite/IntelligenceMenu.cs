@@ -185,6 +185,13 @@ namespace intelligenceLite
 
         internal IntelligenceMenuHost Host { get; set; }
 
+        /// <summary>
+        /// Called when user selected the control and needed wrapper over it.
+        /// You can assign own Wrapper for target control.
+        /// </summary>
+        [Description("Called when user selected the control and needed wrapper over it. You can assign own Wrapper for target control.")]
+        public event EventHandler<WrapperNeededEventArgs> WrapperNeeded;
+
 
         public IntelligenceMenu()
         {
