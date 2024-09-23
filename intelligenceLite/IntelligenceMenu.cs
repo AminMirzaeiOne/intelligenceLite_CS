@@ -293,6 +293,17 @@ namespace intelligenceLite
         [Description("AutocompleteMenu will capture focus when opening.")]
         public bool CaptureFocus { get; set; }
 
+        /// <summary>
+        /// Indicates whether the component should draw right-to-left for RTL languages.
+        /// </summary>
+        [DefaultValue(typeof(RightToLeft), "No")]
+        [Description("Indicates whether the component should draw right-to-left for RTL languages.")]
+        public RightToLeft RightToLeft
+        {
+            get { return Host.RightToLeft; }
+            set { Host.RightToLeft = value; }
+        }
+
 
         public IntelligenceMenu()
         {
