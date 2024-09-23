@@ -814,6 +814,11 @@ namespace intelligenceLite
             sourceItems = items;
         }
 
+        public void AddItem(string item)
+        {
+            AddItem(new IntelligenceItem(item));
+        }
+
 
 
         public IntelligenceMenu()
