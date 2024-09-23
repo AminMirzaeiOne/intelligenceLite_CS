@@ -165,7 +165,18 @@ namespace intelligenceLite
                 ItemHovered(this, e);
         }
 
+        private void AdjustScroll()
+        {
+            if (VisibleItems == null)
+                return;
+            if (oldItemCount == VisibleItems.Count)
+                return;
 
+            int needHeight = ItemHeight * VisibleItems.Count + 1;
+            Height = Math.Min(needHeight, MaximumSize.Height);
+            AutoScrollMinSize = new Size(0, needHeight);
+            oldItemCount = VisibleItems.Count;
+        }
 
     }
 }
