@@ -26,6 +26,9 @@ namespace intelligenceLite
         public IList<IntelligenceItem> VisibleItems { get { return Host.ListView.VisibleItems; } private set { Host.ListView.VisibleItems = value; } }
         private Size maximumSize;
 
+        private System.Drawing.Color themeColor = Color.Black;
+        private System.Boolean enableThemeColor = false;
+
 
         public IntelligenceMenu()
         {
