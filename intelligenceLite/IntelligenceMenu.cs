@@ -279,6 +279,13 @@ namespace intelligenceLite
             }
         }
 
+        /// <summary>
+        /// AutocompleteMenu will popup automatically (when user writes text). Otherwise it will popup only programmatically or by Ctrl-Space.
+        /// </summary>
+        [DefaultValue(true)]
+        [Description("AutocompleteMenu will popup automatically (when user writes text). Otherwise it will popup only programmatically or by Ctrl-Space.")]
+        public bool AutoPopup { get; set; }
+
 
         public IntelligenceMenu()
         {
