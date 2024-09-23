@@ -90,6 +90,17 @@ namespace intelligenceLite
             }
         }
 
+        [Category("Appearance")]
+        public Color SelectedBackColor
+        {
+            get { return this.selectedBackColor; }
+            set
+            {
+                this.selectedBackColor = value;
+                this.ListView.SelectedBackColor = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
