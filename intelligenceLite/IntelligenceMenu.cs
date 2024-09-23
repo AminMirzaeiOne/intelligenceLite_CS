@@ -405,6 +405,64 @@ namespace intelligenceLite
             return Host.ListView.GetItemRectangle(itemIndex);
         }
 
+        #region IExtenderProvider Members
+
+        bool IExtenderProvider.CanExtend(object extendee)
+        {
+            //find  AutocompleteMenu with lowest hashcode
+            if (Container != null)
+                foreach (object comp in Container.Components)
+                    if (comp is IntelligenceMenu)
+                        if (comp.GetHashCode() < GetHashCode())
+                            return false;
+            //we are main autocomplete menu on form ...
+            //check extendee as TextBox
+            if (!(extendee is Control))
+                return false;
+            var temp = TextBoxWrapper.Create(extendee as Control);
+            return temp != null;
+        }
+
+        public void SetIntelligenceMenu(Control control, IntelligenceMenu menu)
+        {
+            if (menu != null)
+            {
+                if (WrapperByControls.ContainsKey(control))
+                    return;
+                var wrapper = menu.CreateWrapper(control);
+                if (wrapper == null) return;
+                //
+                if (control.IsHandleCreated)
+                    menu.SubscribeForm(wrapper);
+                else
+                    control.HandleCreated += (o, e) => menu.SubscribeForm(wrapper);
+                //
+                IntelligenceMenuByControls[control] = this;
+                //
+                wrapper.LostFocus += menu.control_LostFocus;
+                wrapper.Scroll += menu.control_Scroll;
+                wrapper.KeyDown += menu.control_KeyDown;
+                wrapper.MouseDown += menu.control_MouseDown;
+            }
+            else
+            {
+                IntelligenceMenuByControls.TryGetValue(control, out menu);
+                IntelligenceMenuByControls.Remove(control);
+                ITextBoxWrapper wrapper = null;
+                WrapperByControls.TryGetValue(control, out wrapper);
+                WrapperByControls.Remove(control);
+                if (wrapper != null && menu != null)
+                {
+                    wrapper.LostFocus -= menu.control_LostFocus;
+                    wrapper.Scroll -= menu.control_Scroll;
+                    wrapper.KeyDown -= menu.control_KeyDown;
+                    wrapper.MouseDown -= menu.control_MouseDown;
+                }
+            }
+        }
+
+        #endregion
+
 
         public IntelligenceMenu()
         {
