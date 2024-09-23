@@ -249,6 +249,16 @@ namespace intelligenceLite
             }
         }
 
+        /// <summary>
+        /// Font
+        /// </summary>
+        public Font Font
+        {
+            get { return (Host.ListView as Control).Font; }
+            set { (Host.ListView as Control).Font = value; }
+        }
+
+
         public IntelligenceMenu()
         {
             InitializeComponent();
