@@ -608,6 +608,16 @@ namespace intelligenceLite
             ResetTimer(-1);
         }
 
+        void ResetTimer(int interval)
+        {
+            if (interval <= 0)
+                timer.Interval = AppearInterval;
+            else
+                timer.Interval = interval;
+            timer.Stop();
+            timer.Start();
+        }
+
 
         public IntelligenceMenu()
         {
