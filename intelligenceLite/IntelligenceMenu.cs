@@ -183,6 +183,8 @@ namespace intelligenceLite
             internal set { Host.ListView.SelectedItemIndex = value; }
         }
 
+        internal IntelligenceMenuHost Host { get; set; }
+
 
         public IntelligenceMenu()
         {
