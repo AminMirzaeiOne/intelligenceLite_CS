@@ -881,6 +881,14 @@ namespace intelligenceLite
             OnSelected(args2);
         }
 
+        private void ApplyIntelligence(IntelligenceItem item, Range fragment)
+        {
+            string newText = item.GetTextForReplace();
+            //replace text of fragment
+            fragment.Text = newText;
+            fragment.TargetWrapper.TargetControl.Focus();
+        }
+
 
 
         public IntelligenceMenu()
