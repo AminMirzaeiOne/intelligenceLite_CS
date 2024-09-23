@@ -124,6 +124,18 @@ namespace intelligenceLite
         public int LeftPadding { get; set; }
         public ImageList ImageList { get; set; }
 
+        public IList<IntelligenceItem> VisibleItems
+        {
+            get { return visibleItems; }
+            set
+            {
+                visibleItems = value;
+                SelectedItemIndex = -1;
+                AdjustScroll();
+                Invalidate();
+            }
+        }
+
 
 
     }
