@@ -481,6 +481,11 @@ namespace intelligenceLite
         [Description("Occurs when user hovered item.")]
         public event EventHandler<HoveredEventArgs> Hovered;
 
+        /// <summary>
+        /// Occurs when popup menu is opening
+        /// </summary>
+        public event EventHandler<CancelEventArgs> Opening;
+
 
         public IntelligenceMenu()
         {
