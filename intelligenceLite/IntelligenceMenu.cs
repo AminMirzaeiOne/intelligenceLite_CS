@@ -386,6 +386,9 @@ namespace intelligenceLite
             }
         }
 
+        [DefaultValue(true)]
+        public bool Enabled { get; set; }
+
 
         public IntelligenceMenu()
         {
