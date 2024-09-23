@@ -101,6 +101,17 @@ namespace intelligenceLite
             }
         }
 
+        [Category("Appearance")]
+        public Color SelectedBackColor2
+        {
+            get { return this.selectedBackColor2; }
+            set
+            {
+                this.selectedBackColor2 = value;
+                this.ListView.SelectedBackColor2 = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
