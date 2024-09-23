@@ -266,6 +266,18 @@ namespace intelligenceLite
             Invalidate(true);
         }
 
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+
+            if (e.Button == MouseButtons.Left)
+            {
+                SelectedItemIndex = PointToItemIndex(e.Location);
+                ScrollToSelected();
+                Invalidate();
+            }
+        }
+
 
 
     }
