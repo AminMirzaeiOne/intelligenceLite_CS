@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -817,6 +818,18 @@ namespace intelligenceLite
         public void AddItem(string item)
         {
             AddItem(new IntelligenceItem(item));
+        }
+
+
+        public void AddItem(IntelligenceItem item)
+        {
+            if (sourceItems == null)
+                sourceItems = new List<IntelligenceItem>();
+
+            if (sourceItems is IList)
+                (sourceItems as IList).Add(item);
+            else
+                throw new Exception("Current autocomplete items does not support adding");
         }
 
 
