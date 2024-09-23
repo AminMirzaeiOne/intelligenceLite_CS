@@ -526,6 +526,11 @@ namespace intelligenceLite
             form.LostFocus -= new EventHandler(form_LocationChanged);
         }
 
+        private void form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Close();
+        }
+
 
         public IntelligenceMenu()
         {
