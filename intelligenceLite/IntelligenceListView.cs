@@ -81,5 +81,11 @@ namespace intelligenceLite
             LeftPadding = 18;
             ToolTipDuration = 3000;
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            this.BorderStyle = BorderStyle.None;
+        }
     }
 }
