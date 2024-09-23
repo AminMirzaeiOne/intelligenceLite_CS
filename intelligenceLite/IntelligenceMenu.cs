@@ -333,6 +333,13 @@ namespace intelligenceLite
         [DefaultValue(2)]
         public int MinFragmentLength { get; set; }
 
+        /// <summary>
+        /// Allows TAB for select menu item
+        /// </summary>
+        [Description("Allows TAB for select menu item")]
+        [DefaultValue(false)]
+        public bool AllowsTabKey { get; set; }
+
 
         public IntelligenceMenu()
         {
