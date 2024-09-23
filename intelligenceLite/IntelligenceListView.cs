@@ -11,6 +11,7 @@ using static intelligenceLite.EventArgs;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Drawing.Drawing2D;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace intelligenceLite
 {
@@ -316,6 +317,16 @@ namespace intelligenceLite
         private int PointToItemIndex(Point p)
         {
             return (p.Y + VerticalScroll.Value) / ItemHeight;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            var host = Parent as IntelligenceMenuHost;
+            if (host != null)
+                if (host.Menu.ProcessKey((char)keyData, Keys.None))
+                    return true;
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
 
