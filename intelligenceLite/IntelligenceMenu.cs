@@ -21,6 +21,7 @@ namespace intelligenceLite
 
         private ITextBoxWrapper targetControlWrapper;
         private readonly Timer timer = new Timer();
+        private Form myForm;
 
         private IEnumerable<IntelligenceItem> sourceItems = new List<IntelligenceItem>();
         [Browsable(false)]
