@@ -618,6 +618,11 @@ namespace intelligenceLite
             timer.Start();
         }
 
+        private void control_Scroll(object sender, ScrollEventArgs e)
+        {
+            Close();
+        }
+
 
         public IntelligenceMenu()
         {
