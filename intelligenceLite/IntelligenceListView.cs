@@ -299,5 +299,14 @@ namespace intelligenceLite
         }
 
 
+        protected override void OnMouseDoubleClick(MouseEventArgs e)
+        {
+            base.OnMouseDoubleClick(e);
+            SelectedItemIndex = PointToItemIndex(e.Location);
+            Invalidate();
+            OnItemSelected();
+        }
+
+
     }
 }
