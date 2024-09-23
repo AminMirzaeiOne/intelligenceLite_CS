@@ -170,6 +170,12 @@ namespace intelligenceLite
             OnHovered(e);
         }
 
+        public void OnHovered(HoveredEventArgs e)
+        {
+            if (Hovered != null)
+                Hovered(this, e);
+        }
+
 
         public IntelligenceMenu()
         {
