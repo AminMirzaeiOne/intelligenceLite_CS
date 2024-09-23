@@ -628,6 +628,14 @@ namespace intelligenceLite
             if (!Host.Focused) Close();
         }
 
+        public IntelligenceMenu GetIntelligenceMenu(Control control)
+        {
+            if (IntelligenceMenuByControls.ContainsKey(control))
+                return IntelligenceMenuByControls[control];
+            else
+                return null;
+        }
+
 
         public IntelligenceMenu()
         {
