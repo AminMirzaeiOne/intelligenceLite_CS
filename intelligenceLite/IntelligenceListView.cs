@@ -99,6 +99,18 @@ namespace intelligenceLite
             base.Dispose(disposing);
         }
 
+        public int ItemHeight
+        {
+            get { return itemHeight; }
+            set
+            {
+                itemHeight = value;
+                VerticalScroll.SmallChange = value;
+                oldItemCount = -1;
+                AdjustScroll();
+            }
+        }
+
 
     }
 }
