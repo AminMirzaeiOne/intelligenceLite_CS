@@ -5,11 +5,19 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace intelligenceLite
 {
-    public partial class IntelligenceMenu : Component
+    [ProvideProperty("IntelligenceMenu", typeof(Control))]
+    public partial class IntelligenceMenu : Component, IExtenderProvider
     {
+        private static readonly Dictionary<Control, IntelligenceMenu> IntelligenceMenuByControls =
+            new Dictionary<Control, IntelligenceMenu>();
+        private static readonly Dictionary<Control, ITextBoxWrapper> WrapperByControls =
+            new Dictionary<Control, ITextBoxWrapper>();
+
+
         public IntelligenceMenu()
         {
             InitializeComponent();
