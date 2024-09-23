@@ -68,6 +68,17 @@ namespace intelligenceLite
             }
         }
 
+        [Category("Appearance")]
+        public Color BackColor
+        {
+            get { return this.backColor; }
+            set
+            {
+                this.backColor = value;
+                this.ListView.BackColor = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
