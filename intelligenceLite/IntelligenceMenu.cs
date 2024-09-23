@@ -150,6 +150,16 @@ namespace intelligenceLite
             MinFragmentLength = 2;
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                timer.Dispose();
+                Host.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
 
         public IntelligenceMenu()
         {
