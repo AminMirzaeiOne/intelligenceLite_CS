@@ -603,6 +603,11 @@ namespace intelligenceLite
             ResetTimer();
         }
 
+        void ResetTimer()
+        {
+            ResetTimer(-1);
+        }
+
 
         public IntelligenceMenu()
         {
