@@ -201,6 +201,19 @@ namespace intelligenceLite
                 args.Wrapper = TextBoxWrapper.Create(args.TargetControl);
         }
 
+        ITextBoxWrapper CreateWrapper(Control control)
+        {
+            if (WrapperByControls.ContainsKey(control))
+                return WrapperByControls[control];
+
+            var args = new WrapperNeededEventArgs(control);
+            OnWrapperNeeded(args);
+            if (args.Wrapper != null)
+                WrapperByControls[control] = args.Wrapper;
+
+            return args.Wrapper;
+        }
+
         public IntelligenceMenu()
         {
             InitializeComponent();
