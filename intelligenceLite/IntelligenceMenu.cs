@@ -832,6 +832,17 @@ namespace intelligenceLite
                 throw new Exception("Current autocomplete items does not support adding");
         }
 
+        /// <summary>
+        /// Shows popup menu immediately
+        /// </summary>
+        /// <param name="forced">If True - MinFragmentLength will be ignored</param>
+        public void Show(Control control, bool forced)
+        {
+            SetIntelligenceMenu(control, this);
+            this.TargetControlWrapper = FindWrapper(control);
+            ShowIntelligence(forced);
+        }
+
 
 
         public IntelligenceMenu()
