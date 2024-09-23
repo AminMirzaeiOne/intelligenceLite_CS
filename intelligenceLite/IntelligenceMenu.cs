@@ -304,6 +304,15 @@ namespace intelligenceLite
             set { Host.RightToLeft = value; }
         }
 
+        /// <summary>
+        /// Image list
+        /// </summary>
+        public ImageList ImageList
+        {
+            get { return Host.ListView.ImageList; }
+            set { Host.ListView.ImageList = value; }
+        }
+
 
         public IntelligenceMenu()
         {
