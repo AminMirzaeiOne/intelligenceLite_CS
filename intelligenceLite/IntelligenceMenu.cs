@@ -486,6 +486,13 @@ namespace intelligenceLite
         /// </summary>
         public event EventHandler<CancelEventArgs> Opening;
 
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Stop();
+            if (TargetControlWrapper != null)
+                ShowIntelligence(false);
+        }
+
 
         public IntelligenceMenu()
         {
