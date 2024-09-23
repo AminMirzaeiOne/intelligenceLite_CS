@@ -908,6 +908,44 @@ namespace intelligenceLite
             (Host.ListView as Control).Invalidate();
         }
 
+        public bool ProcessKey(char c, Keys keyModifiers)
+        {
+            var page = Host.Height / (Font.Height + 4);
+            if (keyModifiers == Keys.None)
+                switch ((Keys)c)
+                {
+                    case Keys.Down:
+                        SelectNext(+1);
+                        return true;
+                    case Keys.PageDown:
+                        SelectNext(+page);
+                        return true;
+                    case Keys.Up:
+                        SelectNext(-1);
+                        return true;
+                    case Keys.PageUp:
+                        SelectNext(-page);
+                        return true;
+                    case Keys.Enter:
+                        OnSelecting();
+                        return true;
+                    case Keys.Tab:
+                        if (!AllowsTabKey)
+                            break;
+                        OnSelecting();
+                        return true;
+                    case Keys.Left:
+                    case Keys.Right:
+                        Close();
+                        return false;
+                    case Keys.Escape:
+                        Close();
+                        return true;
+                }
+
+            return false;
+        }
+
 
 
         public IntelligenceMenu()
