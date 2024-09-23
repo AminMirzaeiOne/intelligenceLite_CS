@@ -281,7 +281,11 @@ namespace intelligenceLite
         }
 
 
-
+        protected override void OnMouseEnter(EventArgs e)
+        {
+            base.OnMouseEnter(e);
+            mouseEnterPoint = Control.MousePosition;
+        }
 
 
     }
