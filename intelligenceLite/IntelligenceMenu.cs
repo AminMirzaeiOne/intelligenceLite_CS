@@ -623,6 +623,11 @@ namespace intelligenceLite
             Close();
         }
 
+        private void control_LostFocus(object sender, EventArgs e)
+        {
+            if (!Host.Focused) Close();
+        }
+
 
         public IntelligenceMenu()
         {
