@@ -10,6 +10,7 @@ using System.Drawing;
 using static intelligenceLite.EventArgs;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Drawing.Drawing2D;
 
 namespace intelligenceLite
 {
@@ -201,6 +202,65 @@ namespace intelligenceLite
         {
             e.Graphics.Clear(this.BackColor);
         }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            bool rtl = RightToLeft == RightToLeft.Yes;
+            AdjustScroll();
+            int startI = VerticalScroll.Value / ItemHeight - 1;
+            int finishI = (VerticalScroll.Value + ClientSize.Height) / ItemHeight + 1;
+            startI = Math.Max(startI, 0);
+            finishI = Math.Min(finishI, VisibleItems.Count);
+            int y = 0;
+
+            for (int i = startI; i < finishI; i++)
+            {
+                y = i * ItemHeight - VerticalScroll.Value;
+
+                if (ImageList != null && VisibleItems[i].ImageIndex >= 0)
+                    if (rtl)
+                        e.Graphics.DrawImage(ImageList.Images[VisibleItems[i].ImageIndex], Width - 1 - LeftPadding, y);
+                    else
+                        e.Graphics.DrawImage(ImageList.Images[VisibleItems[i].ImageIndex], 1, y);
+
+                var textRect = new Rectangle(LeftPadding, y, ClientSize.Width - 1 - LeftPadding, ItemHeight - 1);
+                if (rtl)
+                    textRect = new Rectangle(1, y, ClientSize.Width - 1 - LeftPadding, ItemHeight - 1);
+
+                if (i == SelectedItemIndex)
+                {
+                    Brush selectedBrush = new LinearGradientBrush(new Point(0, y - 3), new Point(0, y + ItemHeight),
+                                                                  this.SelectedBackColor2, this.SelectedBackColor);
+                    e.Graphics.FillRectangle(selectedBrush, textRect);
+                    using (var pen = new Pen(this.SelectedBackColor2))
+                        e.Graphics.DrawRectangle(pen, textRect);
+                }
+
+                if (i == HighlightedItemIndex)
+                    using (var pen = new Pen(this.HighlightingColor))
+                        e.Graphics.DrawRectangle(pen, textRect);
+
+                var sf = new StringFormat();
+                if (rtl)
+                    sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
+
+                var args = new PaintItemEventArgs(e.Graphics, e.ClipRectangle)
+                {
+                    Font = Font,
+                    TextRect = new RectangleF(textRect.Location, textRect.Size),
+                    StringFormat = sf,
+                    IsSelected = i == SelectedItemIndex,
+                    IsHovered = i == HighlightedItemIndex,
+                };
+                //call drawing
+                VisibleItems[i].OnPaint(args);
+            }
+
+            if (this.Border)
+                e.Graphics.DrawRectangle(new Pen(this.BorderColor, this.BorderSize), e.ClipRectangle);
+        }
+
+
 
     }
 }
