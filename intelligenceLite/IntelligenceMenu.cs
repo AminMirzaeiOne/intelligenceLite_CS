@@ -463,6 +463,12 @@ namespace intelligenceLite
 
         #endregion
 
+        /// <summary>
+        /// User selects item
+        /// </summary>
+        [Description("Occurs when user selects item.")]
+        public event EventHandler<SelectingEventArgs> Selecting;
+
 
         public IntelligenceMenu()
         {
