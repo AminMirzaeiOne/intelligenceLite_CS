@@ -214,6 +214,24 @@ namespace intelligenceLite
             return args.Wrapper;
         }
 
+        /// <summary>
+        /// Current target control wrapper
+        /// </summary>
+        [Browsable(false)]
+        public ITextBoxWrapper TargetControlWrapper
+        {
+            get { return targetControlWrapper; }
+            set
+            {
+                targetControlWrapper = value;
+                if (value != null && !WrapperByControls.ContainsKey(value.TargetControl))
+                {
+                    WrapperByControls[value.TargetControl] = value;
+                    SetIntelligenceMenu(value.TargetControl, this);
+                }
+            }
+        }
+
         public IntelligenceMenu()
         {
             InitializeComponent();
