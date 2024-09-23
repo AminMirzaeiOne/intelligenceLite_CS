@@ -29,6 +29,13 @@ namespace intelligenceLite
         private System.Drawing.Color themeColor = Color.Black;
         private System.Boolean enableThemeColor = false;
 
+        private System.Drawing.Color foreColor = Color.Black;
+        private System.Drawing.Color backColor = Color.White;
+        private System.Drawing.Color selectedForeColor = Color.White;
+        private System.Drawing.Color selectedBackColor = Color.Orange;
+        private System.Drawing.Color selectedBackColor2 = Color.Tomato;
+        private System.Drawing.Color highlightingColor = Color.White;
+
 
         public IntelligenceMenu()
         {
