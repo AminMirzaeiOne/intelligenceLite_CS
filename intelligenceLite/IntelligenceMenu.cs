@@ -531,6 +531,11 @@ namespace intelligenceLite
             Close();
         }
 
+        private void form_LocationChanged(object sender, EventArgs e)
+        {
+            Close();
+        }
+
 
         public IntelligenceMenu()
         {
