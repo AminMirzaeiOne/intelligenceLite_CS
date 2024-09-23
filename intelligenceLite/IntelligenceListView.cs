@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Controls;
-using System.ComponentModel;
-using System.Drawing;
 using static intelligenceLite.EventArgs;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using System.Drawing.Drawing2D;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace intelligenceLite
 {
     [System.ComponentModel.ToolboxItem(false)]
-    public class IntelligenceListView : UserControl, IIntelligenceListView
+    public partial class IntelligenceListView : UserControl, IIntelligenceListView
     {
-        private readonly System.Windows.Controls.ToolTip toolTip = new System.Windows.Controls.ToolTip();
+        private readonly System.Windows.Forms.ToolTip toolTip = new System.Windows.Forms.ToolTip();
         public int HighlightedItemIndex { get; set; }
         private int oldItemCount;
         private int selectedItemIndex = -1;
@@ -88,7 +85,7 @@ namespace intelligenceLite
             ToolTipDuration = 3000;
         }
 
-        protected override void OnLoad(EventArgs e)
+        protected override void OnLoad(System.EventArgs e)
         {
             base.OnLoad(e);
             this.BorderStyle = BorderStyle.None;
@@ -282,7 +279,7 @@ namespace intelligenceLite
         }
 
 
-        protected override void OnMouseEnter(EventArgs e)
+        protected override void OnMouseEnter(System.EventArgs e)
         {
             base.OnMouseEnter(e);
             mouseEnterPoint = Control.MousePosition;
@@ -311,7 +308,7 @@ namespace intelligenceLite
         private void OnItemSelected()
         {
             if (ItemSelected != null)
-                ItemSelected(this, EventArgs.Empty);
+                ItemSelected(this, System.EventArgs.Empty);
         }
 
         private int PointToItemIndex(Point p)
