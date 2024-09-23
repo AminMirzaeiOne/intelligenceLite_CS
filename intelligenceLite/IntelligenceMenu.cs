@@ -536,6 +536,11 @@ namespace intelligenceLite
             Close();
         }
 
+        private void control_MouseDown(object sender, MouseEventArgs e)
+        {
+            Close();
+        }
+
 
         public IntelligenceMenu()
         {
