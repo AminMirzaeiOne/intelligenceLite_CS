@@ -514,6 +514,18 @@ namespace intelligenceLite
             form.LostFocus += new EventHandler(form_LocationChanged);
         }
 
+        void UnsubscribeForm(ITextBoxWrapper wrapper)
+        {
+            if (wrapper == null) return;
+            var form = wrapper.TargetControl.FindForm();
+            if (form == null) return;
+
+            form.LocationChanged -= new EventHandler(form_LocationChanged);
+            form.ResizeBegin -= new EventHandler(form_LocationChanged);
+            form.FormClosing -= new FormClosingEventHandler(form_FormClosing);
+            form.LostFocus -= new EventHandler(form_LocationChanged);
+        }
+
 
         public IntelligenceMenu()
         {
