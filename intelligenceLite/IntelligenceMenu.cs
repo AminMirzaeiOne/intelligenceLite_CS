@@ -389,6 +389,14 @@ namespace intelligenceLite
         [DefaultValue(true)]
         public bool Enabled { get; set; }
 
+        /// <summary>
+        /// Updates size of the menu
+        /// </summary>
+        public void Update()
+        {
+            Host.CalcSize();
+        }
+
 
         public IntelligenceMenu()
         {
