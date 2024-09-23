@@ -122,6 +122,8 @@ namespace intelligenceLite
         }
 
         public int LeftPadding { get; set; }
+        public ImageList ImageList { get; set; }
+
 
 
     }
