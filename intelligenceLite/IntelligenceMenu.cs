@@ -397,6 +397,14 @@ namespace intelligenceLite
             Host.CalcSize();
         }
 
+        /// <summary>
+        /// Returns rectangle of item
+        /// </summary>
+        public Rectangle GetItemRectangle(int itemIndex)
+        {
+            return Host.ListView.GetItemRectangle(itemIndex);
+        }
+
 
         public IntelligenceMenu()
         {
