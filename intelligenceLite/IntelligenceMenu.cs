@@ -326,6 +326,13 @@ namespace intelligenceLite
         [DefaultValue(@"[\w\.]")]
         public string SearchPattern { get; set; }
 
+        /// <summary>
+        /// Minimum fragment length for popup
+        /// </summary>
+        [Description("Minimum fragment length for popup")]
+        [DefaultValue(2)]
+        public int MinFragmentLength { get; set; }
+
 
         public IntelligenceMenu()
         {
