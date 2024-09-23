@@ -191,5 +191,11 @@ namespace intelligenceLite
             AutoScrollMinSize += new Size(1, 0);
         }
 
+        public Rectangle GetItemRectangle(int itemIndex)
+        {
+            var y = itemIndex * ItemHeight - VerticalScroll.Value;
+            return new Rectangle(0, y, ClientSize.Width - 1, ItemHeight - 1);
+        }
+
     }
 }
