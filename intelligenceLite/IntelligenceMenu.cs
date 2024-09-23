@@ -347,6 +347,21 @@ namespace intelligenceLite
         [DefaultValue(500)]
         public int AppearInterval { get; set; }
 
+        [DefaultValue(null)]
+        public string[] Items
+        {
+            get
+            {
+                if (sourceItems == null)
+                    return null;
+                var list = new List<string>();
+                foreach (IntelligenceItem item in sourceItems)
+                    list.Add(item.ToString());
+                return list.ToArray();
+            }
+            set { SetIntelligenceItems(value); }
+        }
+
 
         public IntelligenceMenu()
         {
