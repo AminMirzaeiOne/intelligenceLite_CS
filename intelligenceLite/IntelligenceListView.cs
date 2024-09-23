@@ -329,6 +329,13 @@ namespace intelligenceLite
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        public void SelectItem(int itemIndex)
+        {
+            SelectedItemIndex = itemIndex;
+            ScrollToSelected();
+            Invalidate();
+        }
+
 
     }
 }
