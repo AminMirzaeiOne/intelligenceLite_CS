@@ -176,6 +176,13 @@ namespace intelligenceLite
                 Hovered(this, e);
         }
 
+        [Browsable(false)]
+        public int SelectedItemIndex
+        {
+            get { return Host.ListView.SelectedItemIndex; }
+            internal set { Host.ListView.SelectedItemIndex = value; }
+        }
+
 
         public IntelligenceMenu()
         {
