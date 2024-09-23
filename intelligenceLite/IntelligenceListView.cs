@@ -87,5 +87,14 @@ namespace intelligenceLite
             base.OnLoad(e);
             this.BorderStyle = BorderStyle.None;
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                toolTip.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }
