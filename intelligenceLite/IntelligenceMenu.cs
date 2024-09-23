@@ -36,6 +36,27 @@ namespace intelligenceLite
         private System.Drawing.Color selectedBackColor2 = Color.Tomato;
         private System.Drawing.Color highlightingColor = Color.White;
 
+        [Category("Border Options")]
+        public System.Boolean Border
+        {
+            get { return this.ListView.Border; }
+            set { this.ListView.Border = value; }
+        }
+
+        [Category("Border Options")]
+        public System.Drawing.Color BorderColor
+        {
+            get { return this.ListView.BorderColor; }
+            set { this.ListView.BorderColor = value; }
+        }
+
+        [Category("Border Options")]
+        public System.Byte BorderSize
+        {
+            get { return this.ListView.BorderSize; }
+            set { this.ListView.BorderSize = value; }
+        }
+
 
         public IntelligenceMenu()
         {
