@@ -79,6 +79,17 @@ namespace intelligenceLite
             }
         }
 
+        [Category("Appearance")]
+        public Color SelectedForeColor
+        {
+            get { return this.selectedForeColor; }
+            set
+            {
+                this.selectedForeColor = value;
+                this.ListView.SelectedForeColor = value;
+            }
+        }
+
 
         public IntelligenceMenu()
         {
