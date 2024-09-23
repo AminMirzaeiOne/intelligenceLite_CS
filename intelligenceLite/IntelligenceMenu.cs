@@ -554,6 +554,55 @@ namespace intelligenceLite
             return null;
         }
 
+        private void control_KeyDown(object sender, KeyEventArgs e)
+        {
+            TargetControlWrapper = FindWrapper(sender as Control);
+
+            bool backspaceORdel = e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete;
+
+            if (Host.Visible)
+            {
+                if (ProcessKey((char)e.KeyCode, Control.ModifierKeys))
+                    e.SuppressKeyPress = true;
+                else
+                    if (!backspaceORdel)
+                    ResetTimer(1);
+                else
+                    ResetTimer();
+
+                return;
+            }
+
+            if (!Host.Visible)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Up:
+                    case Keys.Down:
+                    case Keys.PageUp:
+                    case Keys.PageDown:
+                    case Keys.Left:
+                    case Keys.Right:
+                    case Keys.End:
+                    case Keys.Home:
+                    case Keys.ControlKey:
+                        {
+                            timer.Stop();
+                            return;
+                        }
+                }
+
+                if (Control.ModifierKeys == Keys.Control && e.KeyCode == Keys.Space)
+                {
+                    ShowIntelligence(true);
+                    e.SuppressKeyPress = true;
+                    return;
+                }
+            }
+
+            ResetTimer();
+        }
+
 
         public IntelligenceMenu()
         {
