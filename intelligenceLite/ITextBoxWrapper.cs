@@ -19,5 +19,7 @@ namespace intelligenceLite
 
         Point GetPositionFromCharIndex(int pos);
 
+        bool Readonly { get; }
+
     }
 }
