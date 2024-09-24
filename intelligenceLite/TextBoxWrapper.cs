@@ -120,5 +120,11 @@ namespace intelligenceLite
             remove { target.KeyDown -= value; }
         }
 
+        public virtual event MouseEventHandler MouseDown
+        {
+            add { target.MouseDown += value; }
+            remove { target.MouseDown -= value; }
+        }
+
     }
 }
