@@ -89,5 +89,11 @@ namespace intelligenceLite
             return target.FindForm();
         }
 
+        public virtual event EventHandler LostFocus
+        {
+            add { target.LostFocus += value; }
+            remove { target.LostFocus -= value; }
+        }
+
     }
 }
