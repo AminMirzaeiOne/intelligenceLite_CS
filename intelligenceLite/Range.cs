@@ -11,5 +11,10 @@ namespace intelligenceLite
         public ITextBoxWrapper TargetWrapper { get; private set; }
         public int Start { get; set; }
         public int End { get; set; }
+
+        public Range(ITextBoxWrapper targetWrapper)
+        {
+            this.TargetWrapper = targetWrapper;
+        }
     }
 }
