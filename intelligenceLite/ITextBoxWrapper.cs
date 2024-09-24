@@ -21,5 +21,10 @@ namespace intelligenceLite
 
         bool Readonly { get; }
 
+        event EventHandler LostFocus;
+        event ScrollEventHandler Scroll;
+        event KeyEventHandler KeyDown;
+        event MouseEventHandler MouseDown;
+
     }
 }
