@@ -131,5 +131,10 @@ namespace intelligenceLite
             get { return target; }
         }
 
+        public bool Readonly
+        {
+            get { return (bool)readonlyProperty.GetValue(target, null); }
+        }
+
     }
 }
