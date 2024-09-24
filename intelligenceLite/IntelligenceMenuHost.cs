@@ -50,5 +50,16 @@ namespace intelligenceLite
             }
         }
 
+        public IntelligenceMenuHost(IntelligenceMenu menu)
+        {
+            AutoClose = false;
+            AutoSize = false;
+            Margin = Padding.Empty;
+            Padding = Padding.Empty;
+
+            Menu = menu;
+            ListView = new IntelligenceListView();
+        }
+
     }
 }
