@@ -22,6 +22,7 @@ namespace intelligenceLite
     {
         Fusion, Flat
     }
+
     [ProvideProperty("IntelligenceMenu", typeof(Control))]
     public class IntelligenceMenu : Component, IExtenderProvider
     {
@@ -455,15 +456,15 @@ namespace intelligenceLite
         public int AppearInterval { get; set; }
 
         [DefaultValue(null)]
-        public string[] Items
+        public intelligenceLite.IntelligenceItem[] Items
         {
             get
             {
                 if (sourceItems == null)
                     return null;
-                var list = new List<string>();
+                var list = new List<intelligenceLite.IntelligenceItem>();
                 foreach (IntelligenceItem item in sourceItems)
-                    list.Add(item.ToString());
+                    list.Add(item);
                 return list.ToArray();
             }
             set { SetIntelligenceItems(value); }

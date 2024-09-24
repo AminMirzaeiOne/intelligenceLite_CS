@@ -15,6 +15,8 @@ namespace TestAutoComplete
         public Form1()
         {
             InitializeComponent();
+            this.intelligenceMenu1.Items[0].SymbolColor = Color.DodgerBlue;
+            
         }
     }
 }

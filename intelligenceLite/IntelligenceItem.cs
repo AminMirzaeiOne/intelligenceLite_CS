@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using static intelligenceLite.EventArgs;
@@ -60,6 +62,18 @@ namespace intelligenceLite
         }
 
         public System.Drawing.Image Icon { get; set; }
+
+        [Category("Symbol Options")]
+        public System.String SymbolIcon { get; set; } = "";
+
+        [Category("Symbol Options")]
+        public System.Drawing.Color SymbolColor { get; set; } = System.Drawing.Color.Crimson;
+
+        [Category("Symbol Options")]
+        public System.Byte SymbolSize { get; set; } = 10;
+
+        [Category("Symbol Options")]
+        public System.Byte Symbol_Y = 5;
 
         public IntelligenceItem()
         {
@@ -131,9 +145,11 @@ namespace intelligenceLite
             using (var brush = new SolidBrush(e.IsSelected ? Parent.SelectedForeColor : Parent.ForeColor))
                 e.Graphics.DrawString(ToString(), e.Font, brush, e.TextRect, e.StringFormat);
 
+            e.Graphics.DrawString(this.SymbolIcon, new Font("Segoe MDL2 Assets", 10, FontStyle.Regular), new SolidBrush(this.SymbolColor), new Point(1,(int)e.TextRect.Y+5));
+
         }
 
-        
+
 
 
 

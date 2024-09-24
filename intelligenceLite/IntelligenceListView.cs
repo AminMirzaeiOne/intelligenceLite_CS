@@ -258,6 +258,7 @@ namespace intelligenceLite
 
             if (this.Border)
                 e.Graphics.DrawRectangle(new Pen(this.BorderColor, this.BorderSize), e.ClipRectangle);
+
         }
 
         protected override void OnScroll(ScrollEventArgs se)
