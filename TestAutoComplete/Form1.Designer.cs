@@ -94,8 +94,9 @@
         "Linux"};
             this.intelligenceMenu1.MinFragmentLength = 1;
             this.intelligenceMenu1.SelectedBackColor = System.Drawing.Color.Violet;
-            this.intelligenceMenu1.SelectedBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(238)))), ((int)(((byte)(130)))), ((int)(((byte)(238)))));
+            this.intelligenceMenu1.SelectedBackColor2 = System.Drawing.Color.Violet;
             this.intelligenceMenu1.SelectedForeColor = System.Drawing.Color.White;
+            this.intelligenceMenu1.Style = intelligenceLite.Styles.Flat;
             this.intelligenceMenu1.TargetControlWrapper = null;
             this.intelligenceMenu1.Theme = intelligenceLite.Themes.Dark;
             this.intelligenceMenu1.ThemeColor = System.Drawing.Color.Violet;

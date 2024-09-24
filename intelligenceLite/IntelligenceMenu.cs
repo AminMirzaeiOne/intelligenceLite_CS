@@ -43,6 +43,7 @@ namespace intelligenceLite
 
         private System.Drawing.Color themeColor = Color.Black;
         private intelligenceLite.Themes theme = intelligenceLite.Themes.None;
+        private intelligenceLite.Styles style = Styles.Fusion;
 
         private System.Drawing.Color foreColor = Color.Black;
         private System.Drawing.Color backColor = Color.White;
@@ -52,7 +53,22 @@ namespace intelligenceLite
         private System.Drawing.Color highlightingColor = Color.White;
 
         [Category("Theme Options")]
-        public intelligenceLite.Styles Style { get; set; } = Styles.Fusion;
+        public intelligenceLite.Styles Style
+        {
+            get { return this.style; }
+            set
+            {
+                this.style = value;
+                if (value == intelligenceLite.Styles.Fusion)
+                {
+                    this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, this.ThemeColor.R, this.ThemeColor.G, this.ThemeColor.B);
+                }
+                else
+                {
+                    this.SelectedBackColor2 = this.ThemeColor;
+                }
+            }
+        }
 
         [Category("Theme Options")]
         public intelligenceLite.Themes Theme
