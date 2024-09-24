@@ -59,14 +59,18 @@ namespace intelligenceLite
             set
             {
                 this.style = value;
-                if (value == intelligenceLite.Styles.Fusion)
+                if (this.ThemeColorEnable)
                 {
-                    this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, this.ThemeColor.R, this.ThemeColor.G, this.ThemeColor.B);
+                    if (value == intelligenceLite.Styles.Fusion)
+                    {
+                        this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, this.ThemeColor.R, this.ThemeColor.G, this.ThemeColor.B);
+                    }
+                    else
+                    {
+                        this.SelectedBackColor2 = this.ThemeColor;
+                    }
                 }
-                else
-                {
-                    this.SelectedBackColor2 = this.ThemeColor;
-                }
+                
             }
         }
 
