@@ -44,6 +44,7 @@ namespace intelligenceLite
         private System.Drawing.Color themeColor = Color.Black;
         private intelligenceLite.Themes theme = intelligenceLite.Themes.None;
         private intelligenceLite.Styles style = Styles.Fusion;
+        private System.Boolean themeColorEnable = false;
 
         private System.Drawing.Color foreColor = Color.Black;
         private System.Drawing.Color backColor = Color.White;
@@ -103,7 +104,24 @@ namespace intelligenceLite
         }
 
         [Category("Theme Options")]
-        public System.Boolean ThemeColorEnable { get; set; } = false;
+        public System.Boolean ThemeColorEnable
+        {
+            get { return this.themeColorEnable; }
+            set
+            {
+                this.themeColorEnable = value;
+                if (value)
+                {
+                    this.BorderColor = this.ThemeColor;
+                    this.HighlightingColor = this.ThemeColor;
+                    this.SelectedBackColor = this.ThemeColor;
+                    if (this.Style == Styles.Fusion)
+                        this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, this.ThemeColor.R, this.ThemeColor.G, this.ThemeColor.B);
+                    else
+                        this.SelectedBackColor2 = this.ThemeColor;
+                }
+            }
+        }
 
         [Category("Theme Options")]
         public System.Drawing.Color ThemeColor
