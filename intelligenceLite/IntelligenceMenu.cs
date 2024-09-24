@@ -37,7 +37,6 @@ namespace intelligenceLite
 
 
         private System.Drawing.Color themeColor = Color.Black;
-        private System.Boolean enableThemeColor = false;
         private intelligenceLite.Themes theme = intelligenceLite.Themes.None;
 
         private System.Drawing.Color foreColor = Color.Black;
@@ -71,6 +70,9 @@ namespace intelligenceLite
                 }
             }
         }
+
+        [Category("Theme Options")]
+        public System.Boolean ThemeColorEnable { get; set; } = false;
 
         [Category("Border Options")]
         public System.Boolean Border
