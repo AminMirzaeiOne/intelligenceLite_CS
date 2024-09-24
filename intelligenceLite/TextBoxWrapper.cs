@@ -54,6 +54,12 @@ namespace intelligenceLite
             return result;
         }
 
+        public virtual string Text
+        {
+            get { return target.Text; }
+            set { target.Text = value; }
+        }
+
 
 
     }
