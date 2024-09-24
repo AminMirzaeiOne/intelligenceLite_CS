@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -78,6 +79,10 @@ namespace intelligenceLite
             set { selectionStart.SetValue(target, value, null); }
         }
 
+        public virtual Point GetPositionFromCharIndex(int pos)
+        {
+            return (Point)getPositionFromCharIndex.Invoke(target, new object[] { pos });
+        }
 
 
     }
