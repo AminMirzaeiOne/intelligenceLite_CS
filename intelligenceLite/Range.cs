@@ -16,5 +16,29 @@ namespace intelligenceLite
         {
             this.TargetWrapper = targetWrapper;
         }
+
+        public string Text
+        {
+            get
+            {
+                var text = TargetWrapper.Text;
+
+                if (string.IsNullOrEmpty(text))
+                    return "";
+                if (Start >= text.Length)
+                    return "";
+                if (End > text.Length)
+                    return "";
+
+                return TargetWrapper.Text.Substring(Start, End - Start);
+            }
+
+            set
+            {
+                TargetWrapper.SelectionStart = Start;
+                TargetWrapper.SelectionLength = End - Start;
+                TargetWrapper.SelectedText = value;
+            }
+        }
     }
 }
