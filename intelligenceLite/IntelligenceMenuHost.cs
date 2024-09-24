@@ -87,5 +87,12 @@ namespace intelligenceLite
             }
         }
 
+        protected override void OnLostFocus(System.EventArgs e)
+        {
+            base.OnLostFocus(e);
+            if (!(ListView as Control).Focused)
+                Close();
+        }
+
     }
 }
