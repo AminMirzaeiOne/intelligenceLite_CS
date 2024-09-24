@@ -43,5 +43,18 @@ namespace intelligenceLite
                 RTBScroll(sender, new ScrollEventArgs(ScrollEventType.EndScroll, 0, 1));
         }
 
+        public static TextBoxWrapper Create(Control targetControl)
+        {
+            var result = new TextBoxWrapper(targetControl);
+
+            if (result.selectedText == null || result.selectionLength == null || result.selectionStart == null ||
+                result.getPositionFromCharIndex == null)
+                return null;
+
+            return result;
+        }
+
+
+
     }
 }
