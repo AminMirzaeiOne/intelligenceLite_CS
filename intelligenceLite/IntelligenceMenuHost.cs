@@ -74,5 +74,18 @@ namespace intelligenceLite
             Size = new System.Drawing.Size((ListView as Control).Size.Width + 4, (ListView as Control).Size.Height + 4);
         }
 
+        public override RightToLeft RightToLeft
+        {
+            get
+            {
+                return base.RightToLeft;
+            }
+            set
+            {
+                base.RightToLeft = value;
+                (ListView as Control).RightToLeft = value;
+            }
+        }
+
     }
 }
