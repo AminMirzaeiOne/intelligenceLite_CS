@@ -154,7 +154,7 @@ namespace intelligenceLite
             if (this.Icon == null)
                 e.Graphics.DrawString(this.SymbolIcon, new Font("Segoe MDL2 Assets", 10, FontStyle.Regular), new SolidBrush(this.SymbolColor), new Point(1, (int)e.TextRect.Y + 5));
             else
-                e.Graphics.DrawImage(ResizeImage(this.Icon, 14, 14), new Point(1, (int)e.TextRect.Y + 5));
+                e.Graphics.DrawImage(ResizeImage(this.Icon, this.IconSize, this.IconSize), new Point(1, (int)e.TextRect.Y + 5));
 
         }
 

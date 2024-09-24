@@ -120,6 +120,10 @@ namespace intelligenceLite
                         this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, this.ThemeColor.R, this.ThemeColor.G, this.ThemeColor.B);
                     else
                         this.SelectedBackColor2 = this.ThemeColor;
+                    foreach (var item in this.Items)
+                    {
+                        item.SymbolColor = this.ThemeColor;
+                    }
                 }
             }
         }
@@ -140,6 +144,10 @@ namespace intelligenceLite
                         this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, value.R, value.G, value.B);
                     else
                         this.SelectedBackColor2 = value;
+                    foreach (var item in this.Items)
+                    {
+                        item.SymbolColor = this.ThemeColor;
+                    }
                 }
             }
         }

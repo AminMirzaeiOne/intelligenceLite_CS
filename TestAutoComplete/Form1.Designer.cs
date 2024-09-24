@@ -83,6 +83,7 @@
             this.intelligenceMenu1.HighlightingColor = System.Drawing.Color.LimeGreen;
             this.intelligenceMenu1.ImageList = this.imageList1;
             intelligenceItem1.Icon = ((System.Drawing.Image)(resources.GetObject("intelligenceItem1.Icon")));
+            intelligenceItem1.IconSize = ((byte)(14));
             intelligenceItem1.ImageIndex = -1;
             intelligenceItem1.MenuText = null;
             intelligenceItem1.SymbolColor = System.Drawing.Color.Crimson;
@@ -92,6 +93,7 @@
             intelligenceItem1.ToolTipText = null;
             intelligenceItem1.ToolTipTitle = null;
             intelligenceItem2.Icon = null;
+            intelligenceItem2.IconSize = ((byte)(20));
             intelligenceItem2.ImageIndex = -1;
             intelligenceItem2.MenuText = null;
             intelligenceItem2.SymbolColor = System.Drawing.Color.Crimson;
@@ -101,6 +103,7 @@
             intelligenceItem2.ToolTipText = null;
             intelligenceItem2.ToolTipTitle = null;
             intelligenceItem3.Icon = null;
+            intelligenceItem3.IconSize = ((byte)(20));
             intelligenceItem3.ImageIndex = -1;
             intelligenceItem3.MenuText = null;
             intelligenceItem3.SymbolColor = System.Drawing.Color.Crimson;
@@ -110,6 +113,7 @@
             intelligenceItem3.ToolTipText = null;
             intelligenceItem3.ToolTipTitle = null;
             intelligenceItem4.Icon = null;
+            intelligenceItem4.IconSize = ((byte)(20));
             intelligenceItem4.ImageIndex = -1;
             intelligenceItem4.MenuText = null;
             intelligenceItem4.SymbolColor = System.Drawing.Color.Crimson;
@@ -119,6 +123,7 @@
             intelligenceItem4.ToolTipText = null;
             intelligenceItem4.ToolTipTitle = null;
             intelligenceItem5.Icon = null;
+            intelligenceItem5.IconSize = ((byte)(20));
             intelligenceItem5.ImageIndex = -1;
             intelligenceItem5.MenuText = null;
             intelligenceItem5.SymbolColor = System.Drawing.Color.Crimson;
@@ -128,6 +133,7 @@
             intelligenceItem5.ToolTipText = null;
             intelligenceItem5.ToolTipTitle = null;
             intelligenceItem6.Icon = null;
+            intelligenceItem6.IconSize = ((byte)(20));
             intelligenceItem6.ImageIndex = -1;
             intelligenceItem6.MenuText = null;
             intelligenceItem6.SymbolColor = System.Drawing.Color.Crimson;
@@ -137,6 +143,7 @@
             intelligenceItem6.ToolTipText = null;
             intelligenceItem6.ToolTipTitle = null;
             intelligenceItem7.Icon = null;
+            intelligenceItem7.IconSize = ((byte)(20));
             intelligenceItem7.ImageIndex = -1;
             intelligenceItem7.MenuText = null;
             intelligenceItem7.SymbolColor = System.Drawing.Color.Crimson;
@@ -146,6 +153,7 @@
             intelligenceItem7.ToolTipText = null;
             intelligenceItem7.ToolTipTitle = null;
             intelligenceItem8.Icon = null;
+            intelligenceItem8.IconSize = ((byte)(20));
             intelligenceItem8.ImageIndex = -1;
             intelligenceItem8.MenuText = null;
             intelligenceItem8.SymbolColor = System.Drawing.Color.Crimson;
