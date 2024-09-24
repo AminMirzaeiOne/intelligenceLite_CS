@@ -95,5 +95,24 @@ namespace intelligenceLite
             remove { target.LostFocus -= value; }
         }
 
+        public virtual event ScrollEventHandler Scroll
+        {
+            add
+            {
+                if (target is RichTextBox)
+                    RTBScroll += value;
+                else
+                    if (target is ScrollableControl) (target as ScrollableControl).Scroll += value;
+
+            }
+            remove
+            {
+                if (target is RichTextBox)
+                    RTBScroll -= value;
+                else
+                    if (target is ScrollableControl) (target as ScrollableControl).Scroll -= value;
+            }
+        }
+
     }
 }
