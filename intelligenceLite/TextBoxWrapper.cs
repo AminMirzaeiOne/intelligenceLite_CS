@@ -60,6 +60,12 @@ namespace intelligenceLite
             set { target.Text = value; }
         }
 
+        public virtual string SelectedText
+        {
+            get { return (string)selectedText.GetValue(target, null); }
+            set { selectedText.SetValue(target, value, null); }
+        }
+
 
 
     }
