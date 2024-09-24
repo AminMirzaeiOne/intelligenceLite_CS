@@ -8,6 +8,6 @@ namespace intelligenceLite
 {
     public class Range
     {
-
+        public ITextBoxWrapper TargetWrapper { get; private set; }
     }
 }
