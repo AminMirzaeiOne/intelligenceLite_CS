@@ -84,6 +84,10 @@ namespace intelligenceLite
             return (Point)getPositionFromCharIndex.Invoke(target, new object[] { pos });
         }
 
+        public virtual Form FindForm()
+        {
+            return target.FindForm();
+        }
 
     }
 }
