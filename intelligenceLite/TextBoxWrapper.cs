@@ -37,5 +37,11 @@ namespace intelligenceLite
                 (target as RichTextBox).VScroll += new EventHandler(TextBoxWrapper_VScroll);
         }
 
+        void TextBoxWrapper_VScroll(object sender, EventArgs e)
+        {
+            if (RTBScroll != null)
+                RTBScroll(sender, new ScrollEventArgs(ScrollEventType.EndScroll, 0, 1));
+        }
+
     }
 }
