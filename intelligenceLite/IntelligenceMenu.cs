@@ -13,6 +13,10 @@ using static intelligenceLite.EventArgs;
 
 namespace intelligenceLite
 {
+    public enum Themes
+    {
+        Light, Dark, Gray
+    }
     [ProvideProperty("IntelligenceMenu", typeof(Control))]
     public class IntelligenceMenu : Component, IExtenderProvider
     {
