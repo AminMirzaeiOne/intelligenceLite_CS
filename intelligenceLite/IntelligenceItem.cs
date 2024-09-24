@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -61,7 +63,11 @@ namespace intelligenceLite
             set { menuText = value; }
         }
 
-        public System.Drawing.Image Icon { get; set; }
+        [Category("Icon Options")]
+        public System.Drawing.Image Icon { get; set; } = null;
+
+        [Category("Icon Options")]
+        public System.Byte IconSize { get; set; } = 20;
 
         [Category("Symbol Options")]
         public System.String SymbolIcon { get; set; } = "";
@@ -145,8 +151,36 @@ namespace intelligenceLite
             using (var brush = new SolidBrush(e.IsSelected ? Parent.SelectedForeColor : Parent.ForeColor))
                 e.Graphics.DrawString(ToString(), e.Font, brush, e.TextRect, e.StringFormat);
 
-            e.Graphics.DrawString(this.SymbolIcon, new Font("Segoe MDL2 Assets", 10, FontStyle.Regular), new SolidBrush(this.SymbolColor), new Point(1,(int)e.TextRect.Y+5));
+            if (this.Icon == null)
+                e.Graphics.DrawString(this.SymbolIcon, new Font("Segoe MDL2 Assets", 10, FontStyle.Regular), new SolidBrush(this.SymbolColor), new Point(1, (int)e.TextRect.Y + 5));
+            else
+                e.Graphics.DrawImage(ResizeImage(this.Icon, 14, 14), new Point(1, (int)e.TextRect.Y + 5));
 
+        }
+
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
         }
 
 

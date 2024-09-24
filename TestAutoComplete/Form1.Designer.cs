@@ -82,11 +82,12 @@
             this.intelligenceMenu1.ForeColor = System.Drawing.Color.White;
             this.intelligenceMenu1.HighlightingColor = System.Drawing.Color.LimeGreen;
             this.intelligenceMenu1.ImageList = this.imageList1;
-            intelligenceItem1.Icon = null;
+            intelligenceItem1.Icon = ((System.Drawing.Image)(resources.GetObject("intelligenceItem1.Icon")));
             intelligenceItem1.ImageIndex = -1;
             intelligenceItem1.MenuText = null;
             intelligenceItem1.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem1.SymbolIcon = "";
+            intelligenceItem1.SymbolSize = ((byte)(10));
             intelligenceItem1.Text = "Android";
             intelligenceItem1.ToolTipText = null;
             intelligenceItem1.ToolTipTitle = null;
@@ -95,6 +96,7 @@
             intelligenceItem2.MenuText = null;
             intelligenceItem2.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem2.SymbolIcon = "";
+            intelligenceItem2.SymbolSize = ((byte)(10));
             intelligenceItem2.Text = "Windows";
             intelligenceItem2.ToolTipText = null;
             intelligenceItem2.ToolTipTitle = null;
@@ -103,6 +105,7 @@
             intelligenceItem3.MenuText = null;
             intelligenceItem3.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem3.SymbolIcon = "";
+            intelligenceItem3.SymbolSize = ((byte)(10));
             intelligenceItem3.Text = "Linux";
             intelligenceItem3.ToolTipText = null;
             intelligenceItem3.ToolTipTitle = null;
@@ -111,6 +114,7 @@
             intelligenceItem4.MenuText = null;
             intelligenceItem4.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem4.SymbolIcon = "";
+            intelligenceItem4.SymbolSize = ((byte)(10));
             intelligenceItem4.Text = "Microsoft";
             intelligenceItem4.ToolTipText = null;
             intelligenceItem4.ToolTipTitle = null;
@@ -119,6 +123,7 @@
             intelligenceItem5.MenuText = null;
             intelligenceItem5.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem5.SymbolIcon = "";
+            intelligenceItem5.SymbolSize = ((byte)(10));
             intelligenceItem5.Text = "Micro";
             intelligenceItem5.ToolTipText = null;
             intelligenceItem5.ToolTipTitle = null;
@@ -127,6 +132,7 @@
             intelligenceItem6.MenuText = null;
             intelligenceItem6.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem6.SymbolIcon = "";
+            intelligenceItem6.SymbolSize = ((byte)(10));
             intelligenceItem6.Text = "Google";
             intelligenceItem6.ToolTipText = null;
             intelligenceItem6.ToolTipTitle = null;
@@ -135,6 +141,7 @@
             intelligenceItem7.MenuText = null;
             intelligenceItem7.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem7.SymbolIcon = "";
+            intelligenceItem7.SymbolSize = ((byte)(10));
             intelligenceItem7.Text = "Golden";
             intelligenceItem7.ToolTipText = null;
             intelligenceItem7.ToolTipTitle = null;
@@ -143,6 +150,7 @@
             intelligenceItem8.MenuText = null;
             intelligenceItem8.SymbolColor = System.Drawing.Color.Crimson;
             intelligenceItem8.SymbolIcon = "";
+            intelligenceItem8.SymbolSize = ((byte)(10));
             intelligenceItem8.Text = "Apple";
             intelligenceItem8.ToolTipText = null;
             intelligenceItem8.ToolTipTitle = null;
