@@ -10,5 +10,10 @@ namespace intelligenceLite
     public interface ITextBoxWrapper
     {
         Control TargetControl { get; }
+
+        string Text { get; }
+        string SelectedText { get; set; }
+        int SelectionLength { get; set; }
+        int SelectionStart { get; set; }
     }
 }
