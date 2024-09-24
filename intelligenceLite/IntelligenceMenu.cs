@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -51,6 +52,9 @@ namespace intelligenceLite
         private System.Drawing.Color highlightingColor = Color.White;
 
         [Category("Theme Options")]
+        public intelligenceLite.Styles Style { get; set; } = Styles.Fusion;
+
+        [Category("Theme Options")]
         public intelligenceLite.Themes Theme
         {
             get { return this.theme; }
@@ -93,7 +97,10 @@ namespace intelligenceLite
                     this.BorderColor = value;
                     this.HighlightingColor = value;
                     this.SelectedBackColor = value;
-                    this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, value.R, value.G, value.B);
+                    if (this.Style == Styles.Fusion)
+                        this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, value.R, value.G, value.B);
+                    else
+                        this.SelectedBackColor2 = value;
                 }
             }
         }
