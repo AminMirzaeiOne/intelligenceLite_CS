@@ -94,5 +94,11 @@ namespace intelligenceLite
                 Close();
         }
 
+        void ListView_LostFocus(object sender, EventArgs e)
+        {
+            if (!Focused)
+                Close();
+        }
+
     }
 }
