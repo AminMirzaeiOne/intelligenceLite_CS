@@ -38,6 +38,7 @@ namespace intelligenceLite
 
         private System.Drawing.Color themeColor = Color.Black;
         private System.Boolean enableThemeColor = false;
+        private intelligenceLite.Themes theme = intelligenceLite.Themes.None;
 
         private System.Drawing.Color foreColor = Color.Black;
         private System.Drawing.Color backColor = Color.White;
@@ -45,6 +46,31 @@ namespace intelligenceLite
         private System.Drawing.Color selectedBackColor = Color.Orange;
         private System.Drawing.Color selectedBackColor2 = Color.Tomato;
         private System.Drawing.Color highlightingColor = Color.White;
+
+        [Category("Theme Options")]
+        public intelligenceLite.Themes Theme
+        {
+            get { return this.theme; }
+            set
+            {
+                this.theme = value;
+                switch (value)
+                {
+                    case Themes.Light:
+                        this.BackColor = System.Drawing.Color.White;
+                        this.ForeColor = System.Drawing.Color.Black;
+                        break;
+                    case Themes.Dark:
+                        this.BackColor = System.Drawing.Color.FromArgb(15,15,15);
+                        this.ForeColor = System.Drawing.Color.White;
+                        break;
+                    case Themes.Gray:
+                        this.BackColor = System.Drawing.Color.DimGray;
+                        this.ForeColor = System.Drawing.Color.Black;
+                        break;
+                }
+            }
+        }
 
         [Category("Border Options")]
         public System.Boolean Border
