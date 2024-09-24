@@ -114,5 +114,11 @@ namespace intelligenceLite
             }
         }
 
+        public virtual event KeyEventHandler KeyDown
+        {
+            add { target.KeyDown += value; }
+            remove { target.KeyDown -= value; }
+        }
+
     }
 }
