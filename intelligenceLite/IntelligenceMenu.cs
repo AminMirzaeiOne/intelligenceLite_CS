@@ -17,6 +17,10 @@ namespace intelligenceLite
     {
         None, Light, Dark, Gray
     }
+    public enum Styles
+    {
+        Fusion, Flat
+    }
     [ProvideProperty("IntelligenceMenu", typeof(Control))]
     public class IntelligenceMenu : Component, IExtenderProvider
     {
@@ -61,7 +65,7 @@ namespace intelligenceLite
                         this.SelectedForeColor = System.Drawing.Color.Black;
                         break;
                     case Themes.Dark:
-                        this.BackColor = System.Drawing.Color.FromArgb(15,15,15);
+                        this.BackColor = System.Drawing.Color.FromArgb(15, 15, 15);
                         this.ForeColor = System.Drawing.Color.White;
                         this.SelectedForeColor = System.Drawing.Color.White;
                         break;
@@ -89,7 +93,7 @@ namespace intelligenceLite
                     this.BorderColor = value;
                     this.HighlightingColor = value;
                     this.SelectedBackColor = value;
-                    this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100,value.R,value.G,value.B);
+                    this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100, value.R, value.G, value.B);
                 }
             }
         }

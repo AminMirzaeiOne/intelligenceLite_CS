@@ -59,6 +59,8 @@ namespace intelligenceLite
             set { menuText = value; }
         }
 
+        public System.Drawing.Image Icon { get; set; }
+
         public IntelligenceItem()
         {
             ImageIndex = -1;
@@ -128,7 +130,10 @@ namespace intelligenceLite
         {
             using (var brush = new SolidBrush(e.IsSelected ? Parent.SelectedForeColor : Parent.ForeColor))
                 e.Graphics.DrawString(ToString(), e.Font, brush, e.TextRect, e.StringFormat);
+
         }
+
+        
 
 
 
