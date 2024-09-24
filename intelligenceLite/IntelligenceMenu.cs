@@ -372,7 +372,7 @@ namespace intelligenceLite
         /// Set to null for restore default ListView (AutocompleteListView).
         /// </summary>
         [Browsable(false)]
-        public IIntelligenceListView ListView
+        internal IIntelligenceListView ListView
         {
             get { return Host.ListView; }
             set
@@ -491,7 +491,7 @@ namespace intelligenceLite
         /// </summary>
         public event EventHandler<CancelEventArgs> Opening;
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, System.EventArgs e)
         {
             timer.Stop();
             if (TargetControlWrapper != null)
@@ -535,7 +535,7 @@ namespace intelligenceLite
             Close();
         }
 
-        private void form_LocationChanged(object sender, EventArgs e)
+        private void form_LocationChanged(object sender, System.EventArgs e)
         {
             Close();
         }
@@ -627,7 +627,7 @@ namespace intelligenceLite
             Close();
         }
 
-        private void control_LostFocus(object sender, EventArgs e)
+        private void control_LostFocus(object sender, System.EventArgs e)
         {
             if (!Host.Focused) Close();
         }

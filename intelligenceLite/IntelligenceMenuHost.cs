@@ -15,7 +15,7 @@ namespace intelligenceLite
         public ToolStripControlHost Host { get; set; }
         public readonly IntelligenceMenu Menu;
 
-        public IIntelligenceListView ListView
+        internal IIntelligenceListView ListView
         {
             get { return listView; }
             set
@@ -94,7 +94,7 @@ namespace intelligenceLite
                 Close();
         }
 
-        void ListView_LostFocus(object sender, EventArgs e)
+        void ListView_LostFocus(object sender, System.EventArgs e)
         {
             if (!Focused)
                 Close();
