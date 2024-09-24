@@ -17,5 +17,11 @@ namespace intelligenceLite
         private PropertyInfo readonlyProperty;
         private MethodInfo getPositionFromCharIndex;
         private event ScrollEventHandler RTBScroll;
+
+        private TextBoxWrapper(Control targetControl)
+        {
+            this.target = targetControl;
+            Init();
+        }
     }
 }
