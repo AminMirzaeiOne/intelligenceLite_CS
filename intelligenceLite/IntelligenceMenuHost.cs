@@ -68,5 +68,11 @@ namespace intelligenceLite
                 e.Graphics.FillRectangle(brush, e.ClipRectangle);
         }
 
+        internal void CalcSize()
+        {
+            Host.Size = (ListView as Control).Size;
+            Size = new System.Drawing.Size((ListView as Control).Size.Width + 4, (ListView as Control).Size.Height + 4);
+        }
+
     }
 }
