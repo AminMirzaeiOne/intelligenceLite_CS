@@ -9,5 +9,7 @@ namespace intelligenceLite
     public class Range
     {
         public ITextBoxWrapper TargetWrapper { get; private set; }
+        public int Start { get; set; }
+        public int End { get; set; }
     }
 }
