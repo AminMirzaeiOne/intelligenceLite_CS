@@ -126,5 +126,10 @@ namespace intelligenceLite
             remove { target.MouseDown -= value; }
         }
 
+        public virtual Control TargetControl
+        {
+            get { return target; }
+        }
+
     }
 }
