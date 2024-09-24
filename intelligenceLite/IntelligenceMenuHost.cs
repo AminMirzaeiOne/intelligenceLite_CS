@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,12 @@ namespace intelligenceLite
 
             Menu = menu;
             ListView = new IntelligenceListView();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            using (var brush = new SolidBrush(listView.BackColor))
+                e.Graphics.FillRectangle(brush, e.ClipRectangle);
         }
 
     }
