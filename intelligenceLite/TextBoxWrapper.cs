@@ -23,5 +23,19 @@ namespace intelligenceLite
             this.target = targetControl;
             Init();
         }
+
+        protected virtual void Init()
+        {
+            var t = target.GetType();
+            selectedText = t.GetProperty("SelectedText");
+            selectionLength = t.GetProperty("SelectionLength");
+            selectionStart = t.GetProperty("SelectionStart");
+            readonlyProperty = t.GetProperty("ReadOnly");
+            getPositionFromCharIndex = t.GetMethod("GetPositionFromCharIndex") ?? t.GetMethod("PositionToPoint");
+
+            if (target is RichTextBox)
+                (target as RichTextBox).VScroll += new EventHandler(TextBoxWrapper_VScroll);
+        }
+
     }
 }
