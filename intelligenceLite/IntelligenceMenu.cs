@@ -58,14 +58,17 @@ namespace intelligenceLite
                     case Themes.Light:
                         this.BackColor = System.Drawing.Color.White;
                         this.ForeColor = System.Drawing.Color.Black;
+                        this.SelectedForeColor = System.Drawing.Color.Black;
                         break;
                     case Themes.Dark:
                         this.BackColor = System.Drawing.Color.FromArgb(15,15,15);
                         this.ForeColor = System.Drawing.Color.White;
+                        this.SelectedForeColor = System.Drawing.Color.White;
                         break;
                     case Themes.Gray:
                         this.BackColor = System.Drawing.Color.DimGray;
                         this.ForeColor = System.Drawing.Color.Black;
+                        this.SelectedForeColor = System.Drawing.Color.Black;
                         break;
                 }
             }
@@ -73,6 +76,24 @@ namespace intelligenceLite
 
         [Category("Theme Options")]
         public System.Boolean ThemeColorEnable { get; set; } = false;
+
+        [Category("Theme Options")]
+        public System.Drawing.Color ThemeColor
+        {
+            get { return this.themeColor; }
+            set
+            {
+                this.themeColor = value;
+                if (this.ThemeColorEnable)
+                {
+                    this.BorderColor = value;
+                    this.HighlightingColor = value;
+                    this.SelectedBackColor = value;
+                    this.SelectedBackColor2 = System.Drawing.Color.FromArgb(100,value.R,value.G,value.B);
+                }
+            }
+        }
+
 
         [Category("Border Options")]
         public System.Boolean Border
