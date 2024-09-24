@@ -66,6 +66,12 @@ namespace intelligenceLite
             set { selectedText.SetValue(target, value, null); }
         }
 
+        public virtual int SelectionLength
+        {
+            get { return (int)selectionLength.GetValue(target, null); }
+            set { selectionLength.SetValue(target, value, null); }
+        }
+
 
 
     }
