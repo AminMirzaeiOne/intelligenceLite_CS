@@ -36,10 +36,10 @@ namespace intelligenceLite
 
 
         [Category("Color Options")]
-        public Color ForeColor { get; set; } = Color.Black;
+        public override Color ForeColor { get; set; } = Color.Black;
 
         [Category("Color Options")]
-        public Color BackColor { get; set; } = Color.White;
+        public override Color BackColor { get; set; } = Color.White;
 
         [Category("Color Options")]
         public Color SelectedForeColor { get; set; } = Color.White;
