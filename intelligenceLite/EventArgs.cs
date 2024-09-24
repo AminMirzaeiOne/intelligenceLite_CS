@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace intelligenceLite
 {
@@ -21,7 +22,7 @@ namespace intelligenceLite
         public class SelectedEventArgs : EventArgs
         {
             public IntelligenceItem Item { get; internal set; }
-            public Control Control { get; set; }
+            public System.Windows.Forms.Control Control { get; set; }
         }
 
         public class HoveredEventArgs : EventArgs
@@ -45,10 +46,10 @@ namespace intelligenceLite
 
         public class WrapperNeededEventArgs : EventArgs
         {
-            public Control TargetControl { get; private set; }
+            public System.Windows.Forms.Control TargetControl { get; private set; }
             public ITextBoxWrapper Wrapper { get; set; }
 
-            public WrapperNeededEventArgs(Control targetControl)
+            public WrapperNeededEventArgs(System.Windows.Forms.Control targetControl)
             {
                 this.TargetControl = targetControl;
             }
