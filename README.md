@@ -32,5 +32,5 @@ Intelligent autocomplete control for textboxes and richtextboxes (Windows form) 
 
 <h2>📷 Screenshots</h2>
 
-<h3>Light Theme Orange</h3>
+<h1>🤍🧡Light Theme Orange</h1>
 
