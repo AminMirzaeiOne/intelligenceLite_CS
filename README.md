@@ -42,4 +42,9 @@ Intelligent autocomplete control for textboxes and richtextboxes (Windows form) 
 <img width="300" alt="Screenshot 48" src="https://github.com/user-attachments/assets/b75f5241-83a0-4a61-9866-f4935817241c">
 <img width="300" alt="Screenshot 49" src="https://github.com/user-attachments/assets/05533237-dea3-46ba-b8e3-707d1ddc8a87">
 
+<h3>🖤 Dark Theme Pink </h3>
+<img width="300" alt="Screenshot 53" src="https://github.com/user-attachments/assets/36cb6c55-ffe8-4c41-bd04-652cbe60ea54">
+<img width="300" alt="Screenshot 51" src="https://github.com/user-attachments/assets/c6281f78-a32d-4bf0-a028-401438f9b549">
+<img width="300" alt="Screenshot 52" src="https://github.com/user-attachments/assets/8adce3ae-36d6-4ef7-9c20-253f5c13e0fc">
+
 
