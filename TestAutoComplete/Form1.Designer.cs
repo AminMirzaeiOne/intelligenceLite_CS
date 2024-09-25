@@ -73,6 +73,7 @@
             // 
             // intelligenceMenu1
             // 
+            this.intelligenceMenu1.AllowsTabKey = true;
             this.intelligenceMenu1.AppearInterval = 100;
             this.intelligenceMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.intelligenceMenu1.Border = true;
@@ -86,7 +87,8 @@
             intelligenceItem1.IconSize = ((byte)(14));
             intelligenceItem1.ImageIndex = -1;
             intelligenceItem1.MenuText = null;
-            intelligenceItem1.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem1.Symbol_Y = ((byte)(5));
+            intelligenceItem1.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem1.SymbolIcon = "";
             intelligenceItem1.SymbolSize = ((byte)(10));
             intelligenceItem1.Text = "Android";
@@ -96,7 +98,8 @@
             intelligenceItem2.IconSize = ((byte)(20));
             intelligenceItem2.ImageIndex = -1;
             intelligenceItem2.MenuText = null;
-            intelligenceItem2.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem2.Symbol_Y = ((byte)(5));
+            intelligenceItem2.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem2.SymbolIcon = "";
             intelligenceItem2.SymbolSize = ((byte)(10));
             intelligenceItem2.Text = "Windows";
@@ -106,7 +109,8 @@
             intelligenceItem3.IconSize = ((byte)(20));
             intelligenceItem3.ImageIndex = -1;
             intelligenceItem3.MenuText = null;
-            intelligenceItem3.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem3.Symbol_Y = ((byte)(5));
+            intelligenceItem3.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem3.SymbolIcon = "";
             intelligenceItem3.SymbolSize = ((byte)(10));
             intelligenceItem3.Text = "Linux";
@@ -116,7 +120,8 @@
             intelligenceItem4.IconSize = ((byte)(20));
             intelligenceItem4.ImageIndex = -1;
             intelligenceItem4.MenuText = null;
-            intelligenceItem4.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem4.Symbol_Y = ((byte)(5));
+            intelligenceItem4.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem4.SymbolIcon = "";
             intelligenceItem4.SymbolSize = ((byte)(10));
             intelligenceItem4.Text = "Microsoft";
@@ -126,7 +131,8 @@
             intelligenceItem5.IconSize = ((byte)(20));
             intelligenceItem5.ImageIndex = -1;
             intelligenceItem5.MenuText = null;
-            intelligenceItem5.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem5.Symbol_Y = ((byte)(5));
+            intelligenceItem5.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem5.SymbolIcon = "";
             intelligenceItem5.SymbolSize = ((byte)(10));
             intelligenceItem5.Text = "Micro";
@@ -136,7 +142,8 @@
             intelligenceItem6.IconSize = ((byte)(20));
             intelligenceItem6.ImageIndex = -1;
             intelligenceItem6.MenuText = null;
-            intelligenceItem6.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem6.Symbol_Y = ((byte)(5));
+            intelligenceItem6.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem6.SymbolIcon = "";
             intelligenceItem6.SymbolSize = ((byte)(10));
             intelligenceItem6.Text = "Google";
@@ -146,7 +153,8 @@
             intelligenceItem7.IconSize = ((byte)(20));
             intelligenceItem7.ImageIndex = -1;
             intelligenceItem7.MenuText = null;
-            intelligenceItem7.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem7.Symbol_Y = ((byte)(5));
+            intelligenceItem7.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem7.SymbolIcon = "";
             intelligenceItem7.SymbolSize = ((byte)(10));
             intelligenceItem7.Text = "Golden";
@@ -156,7 +164,8 @@
             intelligenceItem8.IconSize = ((byte)(20));
             intelligenceItem8.ImageIndex = -1;
             intelligenceItem8.MenuText = null;
-            intelligenceItem8.SymbolColor = System.Drawing.Color.Crimson;
+            intelligenceItem8.Symbol_Y = ((byte)(5));
+            intelligenceItem8.SymbolColor = System.Drawing.Color.LimeGreen;
             intelligenceItem8.SymbolIcon = "";
             intelligenceItem8.SymbolSize = ((byte)(10));
             intelligenceItem8.Text = "Apple";

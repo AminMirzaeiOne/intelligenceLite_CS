@@ -16,10 +16,9 @@ namespace TestAutoComplete
         {
             InitializeComponent();
             this.intelligenceMenu1.ThemeColor = Color.DodgerBlue;
-            this.intelligenceMenu1.Items[1].Symbol_Y = 10;
             this.intelligenceMenu1.Items[0].ToolTipTitle = "Microsoft Account";
             this.intelligenceMenu1.Items[0].ToolTipText = "Microsoft Is Account One Drive";
-            
+            this.intelligenceMenu1.AllowsTabKey = true;
         }
     }
 }

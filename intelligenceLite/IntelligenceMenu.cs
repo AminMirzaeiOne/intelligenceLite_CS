@@ -399,14 +399,14 @@ namespace intelligenceLite
         /// AutocompleteMenu will popup automatically (when user writes text). Otherwise it will popup only programmatically or by Ctrl-Space.
         /// </summary>
         [DefaultValue(true)]
-        [Description("AutocompleteMenu will popup automatically (when user writes text). Otherwise it will popup only programmatically or by Ctrl-Space.")]
+        [Description("IntelligenceMenu will popup automatically (when user writes text). Otherwise it will popup only programmatically or by Ctrl-Space.")]
         public bool AutoPopup { get; set; }
 
         /// <summary>
         /// AutocompleteMenu will capture focus when opening.
         /// </summary>
         [DefaultValue(false)]
-        [Description("AutocompleteMenu will capture focus when opening.")]
+        [Description("IntelligenceMenu will capture focus when opening.")]
         public bool CaptureFocus { get; set; }
 
         /// <summary>

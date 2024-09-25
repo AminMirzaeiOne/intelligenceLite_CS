@@ -79,7 +79,7 @@ namespace intelligenceLite
         public System.Byte SymbolSize { get; set; } = 10;
 
         [Category("Symbol Options")]
-        public System.Byte Symbol_Y { get; set; } = 4;
+        public System.Byte Symbol_Y { get; set; } = 5;
 
         public IntelligenceItem()
         {
