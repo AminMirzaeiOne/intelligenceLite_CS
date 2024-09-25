@@ -79,7 +79,7 @@ namespace intelligenceLite
         public System.Byte SymbolSize { get; set; } = 10;
 
         [Category("Symbol Options")]
-        public System.Byte Symbol_Y = 5;
+        public System.Byte Symbol_Y { get; set; } = 4;
 
         public IntelligenceItem()
         {
@@ -152,9 +152,9 @@ namespace intelligenceLite
                 e.Graphics.DrawString(ToString(), e.Font, brush, e.TextRect, e.StringFormat);
 
             if (this.Icon == null)
-                e.Graphics.DrawString(this.SymbolIcon, new Font("Segoe MDL2 Assets", 10, FontStyle.Regular), new SolidBrush(this.SymbolColor), new Point(1, (int)e.TextRect.Y + 5));
+                e.Graphics.DrawString(this.SymbolIcon, new Font("Segoe MDL2 Assets", 10, FontStyle.Regular), new SolidBrush(this.SymbolColor), new Point(1, (int)e.TextRect.Y + this.Symbol_Y));
             else
-                e.Graphics.DrawImage(ResizeImage(this.Icon, this.IconSize, this.IconSize), new Point(1, (int)e.TextRect.Y + 5));
+                e.Graphics.DrawImage(ResizeImage(this.Icon, this.IconSize, this.IconSize), new Point(1, (int)e.TextRect.Y + this.Symbol_Y));
 
         }
 
