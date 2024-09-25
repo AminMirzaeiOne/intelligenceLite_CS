@@ -33,6 +33,6 @@ Intelligent autocomplete control for textboxes and richtextboxes (Windows form) 
 <h2>📷 Screenshots</h2>
 
 <h3>🤍 Light Theme Orange 🧡</h3>
-<img width="674" alt="Screenshot 47" src="https://github.com/user-attachments/assets/17196166-38b2-48d4-8020-5001b7a0ddce">
+<img width="300" alt="Screenshot 47" src="https://github.com/user-attachments/assets/17196166-38b2-48d4-8020-5001b7a0ddce">
 
 
