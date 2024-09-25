@@ -52,3 +52,8 @@ Intelligent autocomplete control for textboxes and richtextboxes (Windows form) 
 <img width="300" alt="Screenshot 54" src="https://github.com/user-attachments/assets/073b7e8d-4458-4610-a837-f0cddd4c6583">
 <img width="300" alt="Screenshot 55" src="https://github.com/user-attachments/assets/6fbf604d-75ad-4aa5-95e1-bb3122de9fe2">
 
+------------------------
+
+<h3>🪟 The difference between Flat and Fusion styles</h3>
+<img width="450" alt="Screenshot 57" src="https://github.com/user-attachments/assets/2f4fc654-c581-4187-90c3-a3201098e5af">
+<img width="450" alt="Screenshot 58" src="https://github.com/user-attachments/assets/9a4575fd-b8e2-47e6-89f4-b9f81d200740">
