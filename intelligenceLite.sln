@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "intelligenceLite", "intelligenceLite\intelligenceLite.csproj", "{9621E0B0-B11C-4BE6-87CA-4B6B75E81D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligenceLiteWPF", "IntelligenceLiteWPF\IntelligenceLiteWPF.csproj", "{818F3231-BE93-40E8-80A0-3ED79694CFB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9621E0B0-B11C-4BE6-87CA-4B6B75E81D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9621E0B0-B11C-4BE6-87CA-4B6B75E81D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9621E0B0-B11C-4BE6-87CA-4B6B75E81D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818F3231-BE93-40E8-80A0-3ED79694CFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818F3231-BE93-40E8-80A0-3ED79694CFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818F3231-BE93-40E8-80A0-3ED79694CFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818F3231-BE93-40E8-80A0-3ED79694CFB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
